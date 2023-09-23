@@ -23,9 +23,15 @@ const NavigationMenu = () => {
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
-      <NavigationMenuItem className='list-none flex items-center'>
+      <button className='list-none flex items-center relative'>
         <ShoppingCartIcon className='bg-slate-100 rounded-full p-2 cursor-pointer' />
-      </NavigationMenuItem>
+        <div
+          className='rounded-full bg-red-700 flex justify-center items-center p-1 w-7 h-7 absolute text-white text-xs font-medium'
+          style={{ transform: 'translate(95%, 95%)' }}
+        >
+          125
+        </div>
+      </button>
     </NavigationUiMenu>
   );
 };
