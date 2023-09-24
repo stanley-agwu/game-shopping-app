@@ -1,4 +1,5 @@
 import { coreConfig } from '@/common/core/config';
+import { IGame } from '@/common/models';
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 // Define our single API slice object
@@ -7,10 +8,12 @@ export const gameApi = createApi({
   reducerPath: 'games',
   baseQuery: fetchBaseQuery({ baseUrl: coreConfig.endpoints.root }),
   endpoints: builder => ({
-    getAllGames: builder.query({
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    getAllGames: builder.query<IGame[], void>({
       query: () => coreConfig.endpoints.games,
     }),
-    getGame: builder.query({
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    getGame: builder.query<IGame, string>({
       query: (id: string) => coreConfig.endpoints.details.format(id),
     })
   })
