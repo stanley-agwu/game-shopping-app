@@ -19,7 +19,7 @@ const ContentBox = forwardRef(
   ({ children, className, ...rest }: ContentBoxProps, ref) => (
     <div
       {...rest}
-      className={cn('w-full px-4 m-0', className)}
+      className={cn('w-full p-0 m-0', className)}
       ref={ref as LegacyRef<HTMLDivElement>}
     >
       {children}
@@ -35,7 +35,7 @@ export const ContentContainer = forwardRef(
     <div
       {...rest}
       ref={ref as LegacyRef<HTMLDivElement>}
-      className={cn('w-full px-4 mt-4', className)}
+      className={cn('w-full p-4 mt-4', className)}
     >
       {children}
     </div>
@@ -49,10 +49,12 @@ export const GridContent = forwardRef(
     <Grid
       item
       xs={12}
+      sm={6}
+      md={4}
+      lg={3}
       {...rest}
-      sx={{ padding: { xs: '8px', md: '8px 16px 8px 40px' } }}
       ref={ref as MutableRefObject<HTMLDivElement>}
-      className={cn('w-full m-0', className)}
+      className={cn('w-full p-4', className)}
     >
       {children}
     </Grid>
@@ -60,3 +62,18 @@ export const GridContent = forwardRef(
 );
 
 GridContent.displayName = 'GridContent';
+
+export const GridContainer = forwardRef(
+  ({ children, className, ...rest }: HTMLProps<HTMLDivElement>, ref) => (
+    <Grid
+      container
+      {...rest}
+      ref={ref as MutableRefObject<HTMLDivElement>}
+      className={cn('w-full m-0 py-4 px-6', className)}
+    >
+      {children}
+    </Grid>
+  )
+);
+
+GridContainer.displayName = 'GridContainer';

@@ -1,33 +1,43 @@
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions } from '@mui/material';
+import { Button, CardActionArea } from '@mui/material';
+import { IGame } from '../models';
+import ContentBox, { GridContent } from './ContentBox';
 
-export default function MultiActionAreaCard() {
+interface CardItemProp {
+  game: IGame;
+}
+
+const CardItem = ({ game }: CardItemProp) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <GridContent>
       <CardActionArea>
-        <CardMedia
-          component='img'
-          height='140'
-          image='/static/images/cards/contemplative-reptile.jpg'
-          alt='green iguana'
-        />
-        <CardContent>
+        <ContentBox className='h-32 flex items-stretch'>
+          <img
+            src={game.thumb}
+            alt={game.title}
+            width='100%'
+            style={{
+              objectFit: 'cover',
+            }}
+            className='min-h-32 max-h-32'
+          />
+        </ContentBox>
+        <ContentBox className='px-0 py-4'>
           <Typography gutterBottom variant='h5' component='div'>
-            Name
+            {game.title}
           </Typography>
           <Typography variant='body2' color='text.secondary'>
-            Description
+            {game.steamRatingText}
           </Typography>
-        </CardContent>
+        </ContentBox>
       </CardActionArea>
-      <CardActions>
+      <ContentBox className='px-0 py-4'>
         <Button size='small' color='primary'>
           Add to cart
         </Button>
-      </CardActions>
-    </Card>
+      </ContentBox>
+    </GridContent>
   );
-}
+};
+
+export default CardItem;

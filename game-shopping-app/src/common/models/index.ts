@@ -1,6 +1,7 @@
 export interface IGame {
   gameID: string;
-  ttitle: string;
+  dealID: string;
+  title: string;
   isOnSales: number;
   storeID: string;
   thumb: string;
