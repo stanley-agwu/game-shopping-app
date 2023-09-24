@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
 import NavigationMenu from '@/common/components/NavigationMenu';
+import '@/common/lib/extension';
 
 const App = () => (
   <Fragment>

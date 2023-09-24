@@ -7,19 +7,16 @@ import {
 } from '@/common/components/ui/navigation-menu';
 
 import { ReactComponent as ShoppingCartIcon } from '@/assets/shopping-cart.svg';
+import { ReactComponent as LogoIcon } from '@/assets/logo.svg';
 
 const NavigationMenu = () => {
   return (
     <NavigationUiMenu className='flex justify-between px-6 py-2'>
       <NavigationMenuList>
+        <LogoIcon width='28' height='28' />
         <NavigationMenuItem>
           <NavigationMenuLink className={navigationMenuTriggerStyle()} href='/'>
-            Home
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuLink className={navigationMenuTriggerStyle()} href='/'>
-            Store
+            Game shop
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
