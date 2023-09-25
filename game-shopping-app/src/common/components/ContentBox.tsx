@@ -69,7 +69,7 @@ export const GridContainer = forwardRef(
       container
       {...rest}
       ref={ref as MutableRefObject<HTMLDivElement>}
-      className={cn('w-full m-0 py-4 px-6', className)}
+      className={cn('w-full m-0 py-4 px-2', className)}
     >
       {children}
     </Grid>
