@@ -1,9 +1,9 @@
 import { CardActionArea } from '@mui/material';
-import { IGame } from '../models';
-import ContentBox, { GridContent } from './ContentBox';
+import { IGame } from '@/common/models';
+import ContentBox, { GridContent } from '@/common/components/ContentBox';
 import { getItemFromCart, formatCurrency } from '@/common/lib/utils';
 import Rating from '@/modules/shop/components/components/Rating';
-import { Button, ButtonVariantsEnum } from './Button';
+import { Button, ButtonVariantsEnum } from '@/common/components/Button';
 import { useShopContext } from '@/common/context/hook';
 import { ActionTypeEnum } from '@/common/lib/action-types-enum';
 
