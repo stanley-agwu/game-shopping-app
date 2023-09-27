@@ -10,15 +10,22 @@ export interface GameItem {
 
 export interface ShopCart {
   cartItems: GameItem[] | [];
-  totalCartItemsQuantity?: number;
-  totalCartItemsPrice?: string;
-  dispatch?: Dispatch<ReducerAction>;
+  totalCartItemsQuantity: number;
+  totalCartItemsPrice: string;
+  dispatch: Dispatch<ReducerAction>;
 }
 
-const ShopContext = createContext<ShopCart>({ cartItems: [] });
+const initialState: ShopCart = {
+  cartItems: [],
+  totalCartItemsQuantity: 0,
+  totalCartItemsPrice: '',
+  dispatch: () => {},
+};
+
+const ShopContext = createContext<ShopCart>(initialState);
 
 export const ShopCartProvider = ({ children }: { children: ReactNode }) => {
-  const [state, dispatch] = useReducer(shopCartReducer, { cartItems: [] });
+  const [state, dispatch] = useReducer(shopCartReducer, initialState);
 
   const totalCartItemsQuantity = state.cartItems.reduce(
     (sum, game) => sum + game.quantity,
@@ -45,3 +52,5 @@ export const ShopCartProvider = ({ children }: { children: ReactNode }) => {
     </ShopContext.Provider>
   );
 };
+
+export default ShopContext;
