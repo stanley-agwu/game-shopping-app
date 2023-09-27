@@ -1,5 +1,5 @@
-import { ActionTypeEnum } from '@/modules/shop/utils/action-types-enum';
-import { GameItem, ShopCart } from '@/modules/shop/context/shopContext';
+import { ActionTypeEnum } from '@/common/lib/action-types-enum';
+import { GameItem, ShopCart } from '@/common/context/shopContext';
 
 export type ReducerAction = {
   type: ActionTypeEnum;

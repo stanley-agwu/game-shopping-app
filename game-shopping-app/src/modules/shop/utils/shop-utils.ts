@@ -24,6 +24,3 @@ export const getRating = (rate: number): number => {
   }
   return 5;
 }
-
-const currencyFormatter = new Intl.NumberFormat(undefined, { currency: 'USD', style: 'currency'});
-export const formatCurrency = (currency: number) => currencyFormatter.format(currency);

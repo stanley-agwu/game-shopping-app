@@ -1,5 +1,5 @@
-import { createContext, Dispatch, ReactNode, useReducer } from 'react';
-import { formatCurrency } from '../utils/shop-utils';
+import { createContext, Dispatch, ReactNode, useMemo, useReducer } from 'react';
+import { formatCurrency } from '@/common/lib/utils';
 import { ReducerAction, shopCartReducer } from './reducers/shopCartReducer';
 
 export interface GameItem {
@@ -29,15 +29,18 @@ export const ShopCartProvider = ({ children }: { children: ReactNode }) => {
     state.cartItems.reduce((sum, game) => sum + game.price, 0)
   );
 
+  const memoizedContext = useMemo(
+    () => ({
+      ...state,
+      totalCartItemsQuantity,
+      totalCartItemsPrice,
+      dispatch,
+    }),
+    [state, totalCartItemsPrice, totalCartItemsQuantity]
+  );
+
   return (
-    <ShopContext.Provider
-      value={{
-        ...state,
-        totalCartItemsQuantity,
-        totalCartItemsPrice,
-        dispatch,
-      }}
-    >
+    <ShopContext.Provider value={memoizedContext}>
       {children}
     </ShopContext.Provider>
   );

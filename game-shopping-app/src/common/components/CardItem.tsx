@@ -1,7 +1,7 @@
 import { CardActionArea } from '@mui/material';
 import { IGame } from '../models';
 import ContentBox, { GridContent } from './ContentBox';
-import { formatCurrency } from '@/modules/shop/utils/shop-utils';
+import { formatCurrency } from '@/common/lib/utils';
 import Rating from '@/modules/shop/components/components/Rating';
 import { Button } from './Button';
 
