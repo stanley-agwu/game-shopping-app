@@ -1,15 +1,37 @@
 import { CardActionArea } from '@mui/material';
 import { IGame } from '../models';
 import ContentBox, { GridContent } from './ContentBox';
-import { formatCurrency } from '@/common/lib/utils';
+import { getItemFromCart, formatCurrency } from '@/common/lib/utils';
 import Rating from '@/modules/shop/components/components/Rating';
-import { Button } from './Button';
+import { Button, ButtonVariantsEnum } from './Button';
+import { useShopContext } from '@/common/context/hook';
+import { ActionTypeEnum } from '@/common/lib/action-types-enum';
 
 interface CardItemProp {
   game: IGame;
 }
 
 const CardItem = ({ game }: CardItemProp) => {
+  const { cartItems, dispatch } = useShopContext();
+  const gameItemFromCart = getItemFromCart(game.dealID, cartItems);
+
+  const handleAddToCart = () => {
+    const gamePayload = {
+      id: game.dealID,
+      quantity: 1,
+      price: Number(game.normalPrice),
+    };
+    return gameItemFromCart
+      ? dispatch({
+          type: ActionTypeEnum.removeCartItem,
+          payload: gameItemFromCart,
+        })
+      : dispatch({
+          type: ActionTypeEnum.increaseCartItem,
+          payload: gamePayload,
+        });
+  };
+
   return (
     <GridContent>
       <ContentBox className='border-2 border-slate-900 w-full p-4 rounded-lg'>
@@ -39,8 +61,16 @@ const CardItem = ({ game }: CardItemProp) => {
           </ContentBox>
         </CardActionArea>
         <ContentBox className='px-0 py-2'>
-          <Button variant='default' size='lg'>
-            Add to cart
+          <Button
+            size='lg'
+            variant={
+              gameItemFromCart
+                ? ButtonVariantsEnum.destructive
+                : ButtonVariantsEnum.default
+            }
+            onClick={handleAddToCart}
+          >
+            {gameItemFromCart ? 'Remove from cart' : 'Add to cart'}
           </Button>
         </ContentBox>
       </ContentBox>
