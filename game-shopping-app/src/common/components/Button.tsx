@@ -1,4 +1,4 @@
-import React from 'react';
+import { forwardRef, ButtonHTMLAttributes, ReactNode, MouseEvent } from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { cva, type VariantProps } from 'class-variance-authority';
 
@@ -16,6 +16,10 @@ const buttonVariants = cva(
           'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
         secondary:
           'bg-secondary text-secondary-foreground hover:bg-secondary/80',
+        tertiary:
+          'bg-rose-200 text-secondary-foreground hover:bg-rose-500 hover:text-white',
+        groom:
+          'bg-green-200 text-secondary-foreground hover:bg-green-500 hover:text-white',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
         link: 'text-primary underline-offset-4 hover:underline',
       },
@@ -34,12 +38,18 @@ const buttonVariants = cva(
 );
 
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+  extends ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;
+  disabled?: boolean;
+  icon?: ReactNode;
+  className?: string;
+  children?: ReactNode;
+  onClick?: (e: MouseEvent<HTMLButtonElement>) => void;
+  kind?: ButtonIconTypeEnum;
 }
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : 'button';
     return (
@@ -59,6 +69,13 @@ enum ButtonVariantsEnum {
   outline = 'outline',
   secondary = 'secondary',
   ghost = 'ghost',
+  tertiary = 'tertiary',
+  groom = 'groom',
 }
 
-export { Button, buttonVariants, ButtonVariantsEnum };
+enum ButtonIconTypeEnum {
+  delete = 'delete',
+  close = 'close',
+}
+
+export { Button, buttonVariants, ButtonVariantsEnum, ButtonIconTypeEnum };
