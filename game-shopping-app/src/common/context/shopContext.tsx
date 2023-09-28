@@ -1,24 +1,18 @@
 import { createContext, Dispatch, ReactNode, useMemo, useReducer } from 'react';
-import { formatCurrency } from '@/common/lib/utils';
 import { ReducerAction, shopCartReducer } from './reducers/shopCartReducer';
-
-export interface GameItem {
-  id: string;
-  quantity: number;
-  price: number;
-}
+import { ICartItem } from '../models';
 
 export interface ShopCart {
-  cartItems: GameItem[] | [];
+  cartItems: ICartItem[] | [];
   totalCartItemsQuantity: number;
-  totalCartItemsPrice: string;
+  totalCartItemsPrice: number;
   dispatch: Dispatch<ReducerAction>;
 }
 
 const initialState: ShopCart = {
   cartItems: [],
   totalCartItemsQuantity: 0,
-  totalCartItemsPrice: '',
+  totalCartItemsPrice: 0,
   dispatch: () => {},
 };
 
@@ -27,23 +21,12 @@ const ShopContext = createContext<ShopCart>(initialState);
 export const ShopCartProvider = ({ children }: { children: ReactNode }) => {
   const [state, dispatch] = useReducer(shopCartReducer, initialState);
 
-  const totalCartItemsQuantity = state.cartItems.reduce(
-    (sum, game) => sum + game.quantity,
-    0
-  );
-
-  const totalCartItemsPrice = formatCurrency(
-    state.cartItems.reduce((sum, game) => sum + game.price, 0)
-  );
-
   const memoizedContext = useMemo(
     () => ({
       ...state,
-      totalCartItemsQuantity,
-      totalCartItemsPrice,
       dispatch,
     }),
-    [state, totalCartItemsPrice, totalCartItemsQuantity]
+    [state]
   );
 
   return (

@@ -1,57 +1,21 @@
 import { ActionTypeEnum } from '@/common/lib/action-types-enum';
-import { GameItem, ShopCart } from '@/common/context/shopContext';
-import { getItemFromCart } from '@/common/lib/utils';
+import { ShopCart } from '@/common/context/shopContext';
+import { ICartItem } from '@/common/models';
+import { handleDecreaseCartItem, handleIncreaseCartItem, handleRemoveCartItem } from '@/common/context/reducers/common';
 
 export type ReducerAction = {
   type: ActionTypeEnum;
-  payload: GameItem;
+  payload: ICartItem;
 };
 
 export const shopCartReducer = (state: ShopCart, action: ReducerAction): ShopCart => {
   switch (action.type) {
     case ActionTypeEnum.increaseCartItem:
-      return getItemFromCart(action.payload.id, state.cartItems)
-        ? {
-            ...state,
-            cartItems: [
-              ...state.cartItems.map((game) => {
-                if (game.id === action.payload.id) {
-                  return { ...game, quantity: action.payload.quantity + 1 };
-                }
-                return game;
-              }),
-            ],
-          }
-        : { ...state, cartItems: [...state.cartItems, action.payload] };
+      return handleIncreaseCartItem(state, action.payload);
     case ActionTypeEnum.decreaseCartItem:
-      return getItemFromCart(action.payload.id, state.cartItems)
-        ?.quantity === 0
-        ? {
-            ...state,
-            cartItems: [
-              ...state.cartItems.filter(
-                (game) => game.id !== action.payload.id
-              ),
-            ],
-          }
-        : {
-            ...state,
-            cartItems: [
-              ...state.cartItems.map((game) => {
-                if (game.id === action.payload?.id) {
-                  return { ...game, quantity: game.quantity - 1 };
-                }
-                return game;
-              }),
-            ],
-          };
+      return handleDecreaseCartItem(state, action.payload);
     case ActionTypeEnum.removeCartItem:
-      return {
-        ...state,
-        cartItems: [
-          ...state.cartItems.filter((game) => game.id !== action.payload.id),
-        ],
-      };
+      return handleRemoveCartItem(state, action.payload)
     default:
       return state;
   }

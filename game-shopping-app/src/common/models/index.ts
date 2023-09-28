@@ -10,3 +10,11 @@ export interface IGame {
   steamRatingPercent: string;
   normalPrice: string;
 }
+
+export interface ICartItem {
+  id: string;
+  title: string;
+  quantity: number;
+  price: number;
+  thumbnail: string;
+}
