@@ -1,3 +1,5 @@
+import { formatCurrency } from "@/common/lib/utils";
+
 export enum AvailabilityEnum {
   available = 'Available',
   notAvailable = 'Not available'
@@ -24,3 +26,5 @@ export const getRating = (rate: number): number => {
   }
   return 5;
 }
+
+export const getItemTotalPrice = (price: number, quantity: number) => formatCurrency(price * quantity);
