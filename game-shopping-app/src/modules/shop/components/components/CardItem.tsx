@@ -1,5 +1,5 @@
 import { CardActionArea } from '@mui/material';
-import { IGame } from '@/common/models';
+import { ICartItem, IGame } from '@/common/models';
 import ContentBox, { GridContent } from '@/common/components/ContentBox';
 import { getItemFromCart, formatCurrency } from '@/common/lib/utils';
 import Rating from '@/modules/shop/components/components/Rating';
@@ -16,10 +16,12 @@ const CardItem = ({ game }: CardItemProp) => {
   const gameItemFromCart = getItemFromCart(game.dealID, cartItems);
 
   const handleAddToCart = () => {
-    const gamePayload = {
+    const gamePayload: ICartItem = {
       id: game.dealID,
+      title: game.title,
       quantity: 1,
       price: Number(game.normalPrice),
+      thumbnail: game.thumb,
     };
     return gameItemFromCart
       ? dispatch({

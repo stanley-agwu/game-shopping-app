@@ -13,7 +13,8 @@ import { useShopContext } from '@/common/context/hook';
 import CartDrawer from '@/modules/shop/components/components/CartDrawer';
 
 const NavigationMenu = () => {
-  const { totalCartItemsQuantity } = useShopContext();
+  const { totalCartItemsQuantity, cartItems, totalCartItemsPrice, dispatch } =
+    useShopContext();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDrawer = (event: KeyboardEvent | MouseEvent) => {
@@ -28,7 +29,12 @@ const NavigationMenu = () => {
 
     setIsOpen(true);
   };
-  const onClose = () => setIsOpen(false);
+
+  const onClose = (e: MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
+    setIsOpen(false);
+  };
+
   return (
     <NavigationUiMenu className='flex justify-between px-6 py-2'>
       <NavigationMenuList>
@@ -39,7 +45,14 @@ const NavigationMenu = () => {
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
-      <CartDrawer isOpen={isOpen} onClose={onClose} toggleDrawer={toggleDrawer}>
+      <CartDrawer
+        isOpen={isOpen}
+        cartItems={cartItems}
+        totalCartItemsPrice={totalCartItemsPrice}
+        dispatch={dispatch}
+        onClose={onClose}
+        toggleDrawer={toggleDrawer}
+      >
         <button
           onClick={
             toggleDrawer as unknown as MouseEventHandler<HTMLButtonElement>
