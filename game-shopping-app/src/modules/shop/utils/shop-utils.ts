@@ -1,5 +1,3 @@
-import { formatCurrency } from "@/common/lib/utils";
-
 export enum AvailabilityEnum {
   available = 'Available',
   notAvailable = 'Not available'

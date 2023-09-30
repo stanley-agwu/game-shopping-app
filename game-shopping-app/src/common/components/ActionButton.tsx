@@ -22,6 +22,8 @@ const IconButton = forwardRef(
   }
 );
 
+IconButton.displayName = 'IconButton';
+
 export const ActionButton = ({ className, kind, onClick }: ButtonProps) => (
   <IconButton
     aria-label='Action button'
