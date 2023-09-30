@@ -26,5 +26,3 @@ export const getRating = (rate: number): number => {
   }
   return 5;
 }
-
-export const getItemTotalPrice = (price: number, quantity: number) => formatCurrency(price * quantity);

@@ -12,3 +12,5 @@ export const formatCurrency = (currency: number) => currencyFormatter.format(cur
 export const getItemFromCart = (id: string, cartItems: ICartItem[]) => cartItems.find((game) => game.id === id);
 
 export const filterItemFromCart = (id: string, cartItems: ICartItem[]) => cartItems.filter((game) => game.id !== id);
+
+export const getItemTotalPrice = (price: number, quantity: number) => formatCurrency(price * quantity);

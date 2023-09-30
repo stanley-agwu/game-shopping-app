@@ -10,7 +10,7 @@ import {
 import { ReactComponent as ShoppingCartIcon } from '@/assets/shopping-cart.svg';
 import { ReactComponent as LogoIcon } from '@/assets/logo.svg';
 import { useShopContext } from '@/common/context/hook';
-import CartDrawer from '@/modules/shop/components/components/CartDrawer';
+import CartDrawer from '@/common/components/CartDrawer';
 
 const NavigationMenu = () => {
   const { totalCartItemsQuantity, cartItems, totalCartItemsPrice, dispatch } =

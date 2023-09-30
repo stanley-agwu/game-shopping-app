@@ -51,3 +51,12 @@ export const handleDecreaseCartItem = (state: ShopCart, cartItem: ICartItem) => 
     ],
   };
 };
+
+export const handleResetCartItem = (state: ShopCart) => {
+  return {
+    ...state,
+    totalCartItemsQuantity: 0,
+    totalCartItemsPrice: 0,
+    cartItems: [],
+  }
+}

@@ -19,8 +19,7 @@ import ContentBox, { GridContainer } from '@/common/components/ContentBox';
 import { ICartItem } from '@/common/models';
 import { ActionTypeEnum } from '@/common/lib/action-types-enum';
 import { ReducerAction } from '@/common/context/reducers/shopCartReducer';
-import { getItemTotalPrice } from '@/modules/shop/utils/shop-utils';
-import { formatCurrency } from '@/common/lib/utils';
+import { formatCurrency, getItemTotalPrice } from '@/common/lib/utils';
 
 interface CartDrawerProps extends HTMLAttributes<HTMLDivElement> {
   toggleDrawer: (event: KeyboardEvent | MouseEvent) => void;
@@ -124,16 +123,33 @@ export const GameCart = ({
       ))}
     </List>
     <Box
-      className='flex w-full p-3 pl-5'
-      sx={{ justifyContent: { xs: 'flex-start', md: 'flex-end' } }}
+      className='flex flex-col w-full p-3 pl-5'
+      sx={{ alignItems: { xs: 'flex-start', md: 'flex-end' } }}
     >
       {cartItems?.length ? (
-        <Box className='text-lg font-bold mr-6 pr-8'>
-          <span className='text-lg font-medium mr-2'>Total price: </span>
-          {formatCurrency(totalCartItemsPrice)}
+        <Box className='mt-0 mb-8 mr-6 pr-8'>
+          <Box className='text-lg font-bold'>
+            <span className='text-lg font-medium mr-2'>Total price: </span>
+            {formatCurrency(totalCartItemsPrice)}
+          </Box>
+          <Box className='min-w-full mt-8'>
+            <Button
+              className='min-w-full px-12'
+              onClick={(
+                e: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>
+              ) => {
+                dispatch({
+                  type: ActionTypeEnum.resetCartItem,
+                });
+                onClose(e);
+              }}
+            >
+              Checkout
+            </Button>
+          </Box>
         </Box>
       ) : (
-        <Box className='text-base font-medium'>
+        <Box className='text-base font-medium self-start'>
           There are currently no game items in the cart. Consider adding some.
         </Box>
       )}

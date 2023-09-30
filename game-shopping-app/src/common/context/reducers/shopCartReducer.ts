@@ -1,21 +1,25 @@
 import { ActionTypeEnum } from '@/common/lib/action-types-enum';
 import { ShopCart } from '@/common/context/shopContext';
 import { ICartItem } from '@/common/models';
-import { handleDecreaseCartItem, handleIncreaseCartItem, handleRemoveCartItem } from '@/common/context/reducers/common';
+import { handleDecreaseCartItem, handleIncreaseCartItem, handleRemoveCartItem, handleResetCartItem } from '@/common/context/reducers/common';
 
 export type ReducerAction = {
   type: ActionTypeEnum;
-  payload: ICartItem;
+  payload?: ICartItem;
 };
+
+export type NonNullCartItem = NonNullable<ICartItem>
 
 export const shopCartReducer = (state: ShopCart, action: ReducerAction): ShopCart => {
   switch (action.type) {
     case ActionTypeEnum.increaseCartItem:
-      return handleIncreaseCartItem(state, action.payload);
+      return handleIncreaseCartItem(state, action.payload as NonNullCartItem);
     case ActionTypeEnum.decreaseCartItem:
-      return handleDecreaseCartItem(state, action.payload);
+      return handleDecreaseCartItem(state, action.payload as NonNullCartItem);
     case ActionTypeEnum.removeCartItem:
-      return handleRemoveCartItem(state, action.payload)
+      return handleRemoveCartItem(state, action.payload as NonNullCartItem);
+    case ActionTypeEnum.resetCartItem:
+      return handleResetCartItem(state)
     default:
       return state;
   }
