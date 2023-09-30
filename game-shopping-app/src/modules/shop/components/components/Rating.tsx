@@ -1,5 +1,6 @@
-import { ReactComponent as RateFillIcon } from '@/assets/star-filled.svg';
-import { ReactComponent as RateIcon } from '@/assets/star-empty.svg';
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import RateFillIcon from '@/assets/star-filled.svg';
+import RateIcon from '@/assets/star-empty.svg';
 import { getRating } from '../../utils/shop-utils';
 
 interface RatingProps {
@@ -13,9 +14,9 @@ const Rating = ({ rate, reviews }: RatingProps) => {
     <div className='flex py-2 items-center'>
       {[...Array(5)].map((_, idx) => {
         return rating > idx ? (
-          <RateFillIcon key={idx} />
+          <img src={RateFillIcon} key={idx} />
         ) : (
-          <RateIcon key={idx} />
+          <img src={RateIcon} key={idx} />
         );
       })}
       <span className='ml-4 font-medium text-sm'>{reviews} reviews</span>
