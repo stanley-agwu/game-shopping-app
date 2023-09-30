@@ -1,27 +1,34 @@
-# React + TypeScript + Vite
+# game-shopping-app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is an app bootstrapped with vite and it shows data fetching from an API, data caching, state persistance, data display and presentation. It is responsive and mobile friendly.
 
-Currently, two official plugins are available:
+## Getting started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### `npm start`
 
-## Expanding the ESLint configuration
+Start app like every react app, running the following command:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```sh
+npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+This runs the app in the development mode.\
+Open [http://127.0.0.1:5173/](http://127.0.0.1:5173/) to view it in the browser.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.
+
+### `npm test:ci`
+
+Launches the test coverage in an interactive mode.
+
+## Usage
+
+The app on load shows a dashboard of games items. Each game on the dashboards can be added to a shop cart list and the number of items incremented or decremented, as well as being removed from the cart. And data are persisted accross sessions and saved to local storage.
+
+## More information
+
+See [game-shopping-app]()
+
+See [Github](https://github.com/stanley-agwu/game-shopping-app).
