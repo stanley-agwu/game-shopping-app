@@ -29,6 +29,6 @@ The app on load shows a dashboard of games items. Each game on the dashboards ca
 
 ## More information
 
-See [game-shopping-app]()
+See [game-shopping-app](https://game-shopping-jcp2qa4xg-stanley-agwu.vercel.app)
 
 See [Github](https://github.com/stanley-agwu/game-shopping-app).

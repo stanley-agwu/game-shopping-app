@@ -78,33 +78,38 @@ export const GameCart = ({
                 </Box>
               </ContentBox>
             </ContentBox>
-            <Box width='auto' className='flex items-center justify-end p-2'>
-              <Button
-                className='mr-3 text-xl'
-                variant={ButtonVariantsEnum.tertiary}
-                onClick={() =>
-                  dispatch({
-                    type: ActionTypeEnum.decreaseCartItem,
-                    payload: cartItem,
-                  })
-                }
-              >
-                -
-              </Button>
-              <Button
-                className='mr-3 text-xl'
-                variant={ButtonVariantsEnum.groom}
-                onClick={() =>
-                  dispatch({
-                    type: ActionTypeEnum.increaseCartItem,
-                    payload: cartItem,
-                  })
-                }
-              >
-                +
-              </Button>
+            <Box
+              sx={{ width: { xs: 250, sm: '100%', lg: 400 } }}
+              className='flex items-center justify-end p-2'
+            >
+              <Box sx={{ marginRight: { sm: 'auto' } }}>
+                <Button
+                  className='mr-3 text-xl'
+                  variant={ButtonVariantsEnum.tertiary}
+                  onClick={() =>
+                    dispatch({
+                      type: ActionTypeEnum.decreaseCartItem,
+                      payload: cartItem,
+                    })
+                  }
+                >
+                  -
+                </Button>
+                <Button
+                  className='mr-3 text-xl'
+                  variant={ButtonVariantsEnum.groom}
+                  onClick={() =>
+                    dispatch({
+                      type: ActionTypeEnum.increaseCartItem,
+                      payload: cartItem,
+                    })
+                  }
+                >
+                  +
+                </Button>
+              </Box>
               <Box className='flex items-center min-w-max'>
-                <span className='mx-4 font-semibold'>
+                <span className='mx-3 font-semibold'>
                   {getItemTotalPrice(cartItem.price, cartItem.quantity)}
                 </span>
                 <ActionButton
