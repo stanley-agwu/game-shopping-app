@@ -2,6 +2,8 @@ module.exports = {
   root: true,
   env: { browser: true, es2020: true },
   extends: [
+    'react',
+    'react-app/jest',
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended-type-checked',
     'plugin:react/recommended',
@@ -22,5 +24,6 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    '@typescript-eslint/no-unsafe-call': 0,
   },
 }
