@@ -5,9 +5,6 @@ import './index.scss';
 import { ApiProvider } from '@reduxjs/toolkit/query/react';
 import { gameApi } from '@/common/api/services/gameApi.ts';
 import { ShopCartProvider } from '@/common/context/shopContext.tsx';
-import startBrowserMsw from './mocks/browser.dev.ts';
-
-startBrowserMsw();
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

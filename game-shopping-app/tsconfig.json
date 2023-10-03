@@ -13,7 +13,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "types": ["@testing-library/jest-dom", "node"],
+    "types": ["vitest/globals"],
 
     /* Linting */
     "strict": true,
@@ -22,7 +22,7 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*", "vite.config.ts"]
     }
   },
   "include": ["src"],

@@ -5,6 +5,9 @@ module.exports = {
   moduleFileExtensions: ['js', 'ts', 'tsx'],
   transformIgnorePatterns: ['<rootDir>/node_modules/'],
   testEnvironment: 'jsdom',
+  setupFiles: [
+    '<rootDir>/src/setupTest.ts'
+  ],
   setupFilesAfterEnv: ['<rootDir>/src/setupTest.ts'],
   moduleDirectories: ['node_modules', 'test', 'src'],
   collectCoverage: true,
