@@ -38,9 +38,9 @@ export const ActionButton = ({ className, kind, onClick }: ButtonProps) => (
     onClick={onClick}
   >
     {kind === ButtonIconTypeEnum.close ? (
-      <img src={CloseIcon} alt='Close icon' />
+      <img src={CloseIcon as string} alt='Close icon' />
     ) : (
-      <img src={DeleteIcon} alt='Delete icon' />
+      <img src={DeleteIcon as string} alt='Delete icon' />
     )}
   </IconButton>
 );

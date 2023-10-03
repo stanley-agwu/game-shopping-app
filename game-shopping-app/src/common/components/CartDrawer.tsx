@@ -78,11 +78,8 @@ export const GameCart = ({
                 </Box>
               </ContentBox>
             </ContentBox>
-            <Box
-              sx={{ width: { xs: 250, sm: '100%', lg: 400 } }}
-              className='flex items-center justify-end p-2'
-            >
-              <Box sx={{ marginRight: { sm: 'auto' } }}>
+            <Box className='flex items-center justify-end p-2'>
+              <Box sx={{ marginRight: { sm: 'auto' }, display: 'flex' }}>
                 <Button
                   className='mr-3 text-xl'
                   variant={ButtonVariantsEnum.tertiary}
