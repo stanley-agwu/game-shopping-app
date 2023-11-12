@@ -9,9 +9,9 @@ import {
 
 import ShoppingCartIcon from '@/assets/shopping-cart.svg';
 import LogoIcon from '@/assets/logo.svg';
-import { useShopContext } from '@/common/context/hook';
 import CartDrawer from '@/common/components/CartDrawer';
 import ContentBox from './ContentBox';
+import { useShopContext } from '@/common/context/shopContext';
 
 const NavigationMenu = () => {
   const { totalCartItemsQuantity, cartItems, totalCartItemsPrice, dispatch } =

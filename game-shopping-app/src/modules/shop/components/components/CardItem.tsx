@@ -4,7 +4,7 @@ import ContentBox, { GridContent } from '@/common/components/ContentBox';
 import { getItemFromCart, formatCurrency } from '@/common/lib/utils';
 import Rating from '@/modules/shop/components/components/Rating';
 import { Button, ButtonVariantsEnum } from '@/common/components/Button';
-import { useShopContext } from '@/common/context/hook';
+import { useShopContext } from '@/common/context/shopContext';
 import { ActionTypeEnum } from '@/common/lib/action-types-enum';
 
 interface CardItemProp {
