@@ -4,7 +4,6 @@ import { MemoryRouter } from 'react-router-dom';
 
 import { render, type RenderOptions } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { ShopCartProvider } from '@/common/context/shopContext';
 
 interface ExtendedRenderOptions extends Omit<RenderOptions, 'wrapper'> {
   routerProps?: MemoryRouterProps;
@@ -18,7 +17,7 @@ interface WrapperProps {
 const wrapper = ({ children, options }: WrapperProps): JSX.Element => {
   return (
     <MemoryRouter {...options}>
-      <ShopCartProvider>{children}</ShopCartProvider>
+      {children}
     </MemoryRouter>
   );
 };

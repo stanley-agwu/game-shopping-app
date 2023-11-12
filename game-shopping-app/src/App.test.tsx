@@ -1,10 +1,10 @@
 import App from "./App";
-import { render } from "@/tests/test-utils";
+import { render, screen } from "@/tests/test-utils";
 
 describe("App", () => {
   it('renders App', async() => {
-    const component = render(<App />);
+    render(<App />);
 
-    expect(component).toBeDefined();
+    expect(await screen.findByText('Game shop')).toBeInTheDocument();
   })
 })
