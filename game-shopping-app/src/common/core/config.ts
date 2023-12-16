@@ -12,8 +12,8 @@ interface CoreConfig {
 export const coreConfig: CoreConfig = {
   endpoints: {
     root: 'https://www.cheapshark.com/api/1.0/',
-    games: 'deals?sortBy=savings',
-    details: 'games?id={0}',
+    games: 'deals',
+    details: 'games',
   },
   routes: {
     details: '/games/{0}',
