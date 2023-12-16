@@ -1,10 +1,12 @@
-import { useGetAllGamesQuery } from '@/common/api/services/gameApi';
+import { gameApiService } from '@/common/api/services/gameApiService';
 import ContentBox, { GridContainer } from '@/common/components/ContentBox';
 import ShopItem from './ShopItem';
 import Loader from '@/common/components/Loader';
 
 const Shop = () => {
-  const { isLoading, data } = useGetAllGamesQuery();
+  const { isLoading, data } = gameApiService.useGetAllGamesQuery({
+    sortBy: 'savings',
+  });
 
   if (isLoading) {
     return (
