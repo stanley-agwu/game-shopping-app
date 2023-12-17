@@ -57,7 +57,7 @@ export const GameCart = ({
       {cartItems?.map((cartItem) => (
         <ListItem disablePadding key={cartItem.id} className='w-full p-2'>
           <GridContainer className='w-full flex items-center justify-between p-2 rounded border-2 border-slate-900'>
-            <ContentBox className='w-68 min-h-32 max-h-32 flex'>
+            <ContentBox className='w-72 min-h-32 max-h-32 flex'>
               <img
                 src={cartItem.thumbnail}
                 alt={cartItem.title}
@@ -66,11 +66,11 @@ export const GameCart = ({
                 }}
                 className='w-32 h-32 object-cover border-2 border-slate-900'
               />
-              <ContentBox className='flex flex-col w-36 h-32 py-1 px-4 justify-start'>
+              <ContentBox className='flex flex-col w-40 h-32 py-1 px-4 justify-start'>
                 <Box className='w-full flex flex-wrap text-sm break-all font-medium'>
                   {cartItem.title}
                 </Box>
-                <Box className=' mb-auto'>
+                <Box className='mb-auto'>
                   X <span className='font-bold'>{cartItem.quantity}</span>
                 </Box>
                 <Box className='w-full font-semibold'>
