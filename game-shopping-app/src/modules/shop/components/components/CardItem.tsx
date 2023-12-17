@@ -9,9 +9,10 @@ import { ActionTypeEnum } from '@/common/lib/action-types-enum';
 
 interface CardItemProp {
   game: IGame;
+  className?: string;
 }
 
-const CardItem = ({ game }: CardItemProp) => {
+const CardItem = ({ game, className }: CardItemProp) => {
   const { cartItems, dispatch } = useShopContext();
   const gameItemFromCart = getItemFromCart(game.dealID, cartItems);
 
@@ -35,7 +36,7 @@ const CardItem = ({ game }: CardItemProp) => {
   };
 
   return (
-    <GridContent>
+    <GridContent className={className}>
       <ContentBox className='border border-slate-900 w-full p-4 rounded-lg'>
         <CardActionArea>
           <ContentBox className='h-32 flex items-stretch border-2 border-slate-900'>
