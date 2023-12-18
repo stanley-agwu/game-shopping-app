@@ -1,10 +1,19 @@
-import App from "./App";
-import { render, screen } from "@/tests/test-utils";
+import { describe, expect, it } from 'vitest';
 
-describe("App", () => {
-  it('renders App', async() => {
-    render(<App />);
+import { render, screen } from '@/tests/test-utils';
 
-    expect(await screen.findByText('Game shop')).toBeInTheDocument();
-  })
-})
+import App from './App';
+import ShopContext from './common/context/shopContext';
+import memoizedContext from './mocks/results/context';
+
+describe('App', () => {
+  it('renders App', async () => {
+    render(
+      <ShopContext.Provider value={memoizedContext.memoizedContext}>
+        <App />
+      </ShopContext.Provider>,
+    );
+
+    expect(await screen.findByText('Game shop')).toBeDefined();
+  });
+});

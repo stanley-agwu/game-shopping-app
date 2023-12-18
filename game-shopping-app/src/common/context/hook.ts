@@ -1,6 +1,7 @@
-import { useEffect, useReducer } from "react";
-import { ShopCart } from "@/common/context/shopContext";
-import { shopCartReducer } from "@/common/context/reducers/shopCartReducer";
+import { useEffect, useReducer } from 'react';
+
+import { shopCartReducer } from '@/common/context/reducers/shopCartReducer';
+import { ShopCart } from '@/common/context/shopContext';
 
 export const usePersistState = (key: string, initialState: ShopCart) => {
   const [state, dispatch] = useReducer(shopCartReducer, initialState, () => {
@@ -9,8 +10,8 @@ export const usePersistState = (key: string, initialState: ShopCart) => {
   });
 
   useEffect(() => {
-    localStorage.setItem(key, JSON.stringify(state))
+    localStorage.setItem(key, JSON.stringify(state));
   }, [key, state]);
 
-  return { state, dispatch};
-}
+  return { state, dispatch };
+};

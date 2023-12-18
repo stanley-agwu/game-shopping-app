@@ -1,5 +1,7 @@
 import { createContext, Dispatch, useContext } from 'react';
+
 import { ICartItem } from '../models';
+
 import { ReducerAction } from './reducers/shopCartReducer';
 
 export interface ShopCart {

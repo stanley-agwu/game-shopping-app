@@ -2,21 +2,23 @@
 // allows you to do things like:
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
+import { fetch } from 'cross-fetch';
 import {
   afterAll,
   afterEach,
   beforeAll,
   expect,
 } from 'vitest';
+
 import { server } from '@/mocks/server';
-import { fetch } from 'cross-fetch';
 import * as matchers from '@testing-library/jest-dom/matchers';
+
+import 'jest-canvas-mock';
 
 expect.extend(matchers);
 
 // Add `fetch` polyfill.
 global.fetch = fetch;
-
 
 // Establish API mocking before all tests.
 beforeAll(() => server.listen());

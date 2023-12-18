@@ -14,20 +14,18 @@ interface WrapperProps {
   options?: ExtendedRenderOptions;
 }
 
-const wrapper = ({ children, options }: WrapperProps): JSX.Element => {
-  return (
-    <MemoryRouter {...options}>
-      {children}
-    </MemoryRouter>
-  );
-};
+const wrapper = ({ children, options }: WrapperProps): JSX.Element => (
+  <MemoryRouter {...options}>
+    {children}
+  </MemoryRouter>
+);
 
 const customRender = (
   ui: ReactElement,
   {
     routerProps = {},
     ...renderOptions
-  }: ExtendedRenderOptions = {}
+  }: ExtendedRenderOptions = {},
 ) => render(ui, { wrapper, ...renderOptions });
 
 export * from '@testing-library/react';

@@ -1,8 +1,11 @@
-import { forwardRef, ButtonHTMLAttributes, ReactNode, MouseEvent } from 'react';
-import { Slot } from '@radix-ui/react-slot';
+import {
+  ButtonHTMLAttributes, forwardRef, MouseEvent,
+  ReactNode,
+} from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 
 import { cn } from '@/common/lib/utils';
+import { Slot } from '@radix-ui/react-slot';
 
 const buttonVariants = cva(
   'inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
@@ -34,12 +37,12 @@ const buttonVariants = cva(
       variant: 'default',
       size: 'default',
     },
-  }
+  },
 );
 
 export interface ButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
+  VariantProps<typeof buttonVariants> {
   asChild?: boolean;
   disabled?: boolean;
   icon?: ReactNode;
@@ -50,7 +53,9 @@ export interface ButtonProps
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  ({
+    className, variant, size, asChild = false, ...props
+  }, ref) => {
     const Comp = asChild ? Slot : 'button';
     return (
       <Comp
@@ -59,7 +64,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       />
     );
-  }
+  },
 );
 Button.displayName = 'Button';
 
@@ -78,4 +83,7 @@ enum ButtonIconTypeEnum {
   close = 'close',
 }
 
-export { Button, buttonVariants, ButtonVariantsEnum, ButtonIconTypeEnum };
+export {
+  Button, ButtonIconTypeEnum,
+  buttonVariants, ButtonVariantsEnum,
+};

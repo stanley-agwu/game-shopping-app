@@ -1,5 +1,6 @@
+import { useCallback, useEffect, useState } from 'react';
+
 import { UseQuery } from '@reduxjs/toolkit/dist/query/react/buildHooks';
-import { useState, useEffect, useCallback } from 'react';
 
 export const useInfiniteScroll = <T>(
   useGetListDataQuery: UseQuery<any>,
@@ -12,24 +13,28 @@ export const useInfiniteScroll = <T>(
   const [allData, setAllData] = useState<T[]>([]);
 
   const queryResponse = useGetListDataQuery(
-    {...queryParameters, pageSize, pageNumber },
+    { ...queryParameters, pageSize, pageNumber },
     additionalOptions,
   );
+
+  console.log({ queryResponse });
 
   const data = queryResponse?.data as T[];
   const last = !queryResponse.currentData && !queryResponse.error && !queryResponse.isLoading;
   const hasMore = !last;
-  console.log({ data, allData, pageNumber, hasMore, queryResponse });
+  console.log({
+    data, allData, pageNumber, hasMore, queryResponse,
+  });
 
   useEffect(() => {
-    setCurrentQueryParameters(queryParameters)
+    setCurrentQueryParameters(queryParameters);
   }, [JSON.stringify(queryParameters)]);
 
   useEffect(() => {
     if (data && !queryResponse.isLoading && !queryResponse.error) {
       setAllData((previousData) => [...previousData, ...data]);
     }
-  }, [data])
+  }, [data]);
 
   useEffect(() => {
     if (!cache && !queryResponse.isUninitialized && !queryResponse.isError) {
@@ -53,5 +58,5 @@ export const useInfiniteScroll = <T>(
     isLoading: queryResponse.isLoading,
     isFetching: queryResponse.isFetching,
 
-  }
-}
+  };
+};

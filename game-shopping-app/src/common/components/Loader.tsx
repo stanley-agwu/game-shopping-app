@@ -8,12 +8,12 @@ export interface LoaderProps {
   height?: number;
 }
 
-const Loader = ({
+function Loader({
   width = 100,
   height = 100,
   className,
   ...props
-}: LoaderProps): JSX.Element => {
+}: LoaderProps): JSX.Element {
   const defaultOptions = {
     ...props,
     loop: true,
@@ -25,9 +25,9 @@ const Loader = ({
   };
   return (
     <div
-      role='botton'
+      role="botton"
       tabIndex={0}
-      aria-label='animation'
+      aria-label="animation"
       className={className}
       style={{
         width: `${width}px`,
@@ -40,6 +40,6 @@ const Loader = ({
       <Lottie {...defaultOptions} />
     </div>
   );
-};
+}
 
 export default Loader;

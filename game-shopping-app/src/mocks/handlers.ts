@@ -1,10 +1,9 @@
-import { coreConfig } from '@/common/core/config';
 import { rest } from 'msw';
+
+import { coreConfig } from '@/common/core/config';
+
 import games from './results/games';
 
-const gamesUrl = coreConfig.endpoints.root;
-
 export const handlers = [
-  // Handles a GET /user request
-  rest.get(gamesUrl, (_, res, ctx) => res(ctx.json(games))),
-]
+  rest.get('https://www.cheapshark.com/api/1.0/deals', (_, res, ctx) => res(ctx.json(games))),
+];

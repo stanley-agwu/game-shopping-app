@@ -1,17 +1,18 @@
-import { PreloadedState, combineReducers, configureStore,  } from "@reduxjs/toolkit";
-import { TypedUseSelectorHook, useSelector } from "react-redux";
-import { gameApiService } from "../services/gameApiService";
+import { TypedUseSelectorHook, useSelector } from 'react-redux';
+
+import { combineReducers, configureStore, PreloadedState } from '@reduxjs/toolkit';
+
+import { gameApiService } from '../services/gameApiService';
 
 const rootReducer = combineReducers({
   [gameApiService.reducerPath]: gameApiService.reducer,
-})
+});
 
-export const setupStore = (preloadedState?: PreloadedState<RootState>) => 
-  configureStore({
-    reducer: rootReducer,
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(gameApiService.middleware),
-    preloadedState,
-  });
+export const setupStore = (preloadedState?: PreloadedState<RootState>) => configureStore({
+  reducer: rootReducer,
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(gameApiService.middleware),
+  preloadedState,
+});
 
 export type RootState = ReturnType<typeof rootReducer>;
 export type AppStore = ReturnType<typeof setupStore>;

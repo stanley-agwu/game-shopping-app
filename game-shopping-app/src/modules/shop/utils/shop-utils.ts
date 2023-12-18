@@ -1,13 +1,13 @@
 export enum AvailabilityEnum {
   available = 'Available',
-  notAvailable = 'Not available'
+  notAvailable = 'Not available',
 }
 export const checkAvailability = (code: number): string => {
   if (code === 1) {
-    return AvailabilityEnum.available
+    return AvailabilityEnum.available;
   }
   return AvailabilityEnum.notAvailable;
-}
+};
 
 export const getRating = (rate: number): number => {
   if (rate < 30) {
@@ -23,4 +23,4 @@ export const getRating = (rate: number): number => {
     return 4;
   }
   return 5;
-}
+};
