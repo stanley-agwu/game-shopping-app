@@ -3,12 +3,7 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import { fetch } from 'cross-fetch';
-import {
-  afterAll,
-  afterEach,
-  beforeAll,
-  expect,
-} from 'vitest';
+import { afterAll, afterEach, beforeAll, expect } from 'vitest';
 
 import { server } from '@/mocks/server';
 import * as matchers from '@testing-library/jest-dom/matchers';

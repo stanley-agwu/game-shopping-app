@@ -1,5 +1,8 @@
 import {
-  handleDecreaseCartItem, handleIncreaseCartItem, handleRemoveCartItem, handleResetCartItem,
+  handleDecreaseCartItem,
+  handleIncreaseCartItem,
+  handleRemoveCartItem,
+  handleResetCartItem,
 } from '@/common/context/reducers/common';
 import { ShopCart } from '@/common/context/shopContext';
 import { ActionTypeEnum } from '@/common/lib/action-types-enum';

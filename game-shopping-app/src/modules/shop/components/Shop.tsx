@@ -9,11 +9,9 @@ import { IGame } from '@/common/models';
 import ShopItem from './ShopItem';
 
 function Shop() {
-  const {
-    isLoading, allData, readMore, hasMore,
-  } = useInfiniteScroll<IGame>(
+  const { isLoading, allData, readMore, hasMore } = useInfiniteScroll<IGame>(
     gameApiService.useGetAllGamesQuery,
-    { sortBy: 'savings' },
+    { sortBy: 'savings' }
   );
 
   if (isLoading) {

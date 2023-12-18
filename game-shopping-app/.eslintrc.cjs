@@ -9,18 +9,16 @@ module.exports = {
     'airbnb/hooks',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
   ],
-  overrides: [
-  ],
+  overrides: [],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
-		project: './tsconfig.json',
+    project: './tsconfig.json',
   },
-  plugins: [
-    'react', '@typescript-eslint', 'import', 'simple-import-sort'
-  ],
+  plugins: ['react', '@typescript-eslint', 'import', 'prettier', 'simple-import-sort'],
   settings: {
     react: {
       version: 'detect',
@@ -70,12 +68,7 @@ module.exports = {
           // Side effects imports
           ['^\\u0000'],
           // Other local absolute imports
-          [
-            '^common',
-            '^mocks',
-            '^modules',
-            '^tests',
-          ],
+          ['^common', '^mocks', '^modules', '^tests'],
           // Relative imports
           ['^\\.'],
           // Parent relative imports '../'

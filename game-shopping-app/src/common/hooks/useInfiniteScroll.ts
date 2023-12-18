@@ -6,7 +6,7 @@ export const useInfiniteScroll = <T>(
   useGetListDataQuery: UseQuery<any>,
   { pageSize = 30, ...queryParameters },
   additionalOptions?: any,
-  cache?: boolean,
+  cache?: boolean
 ) => {
   const [pageNumber, setPageNumber] = useState(0);
   const [currentQueryParameters, setCurrentQueryParameters] = useState(queryParameters);
@@ -14,7 +14,7 @@ export const useInfiniteScroll = <T>(
 
   const queryResponse = useGetListDataQuery(
     { ...queryParameters, pageSize, pageNumber },
-    additionalOptions,
+    additionalOptions
   );
 
   console.log({ queryResponse });
@@ -23,7 +23,11 @@ export const useInfiniteScroll = <T>(
   const last = !queryResponse.currentData && !queryResponse.error && !queryResponse.isLoading;
   const hasMore = !last;
   console.log({
-    data, allData, pageNumber, hasMore, queryResponse,
+    data,
+    allData,
+    pageNumber,
+    hasMore,
+    queryResponse,
   });
 
   useEffect(() => {
@@ -57,6 +61,5 @@ export const useInfiniteScroll = <T>(
     hasMore,
     isLoading: queryResponse.isLoading,
     isFetching: queryResponse.isFetching,
-
   };
 };

@@ -26,13 +26,13 @@ function CardItem({ game, className }: CardItemProp) {
     };
     return gameItemFromCart
       ? dispatch({
-        type: ActionTypeEnum.removeCartItem,
-        payload: gameItemFromCart,
-      })
+          type: ActionTypeEnum.removeCartItem,
+          payload: gameItemFromCart,
+        })
       : dispatch({
-        type: ActionTypeEnum.increaseCartItem,
-        payload: gamePayload,
-      });
+          type: ActionTypeEnum.increaseCartItem,
+          payload: gamePayload,
+        });
   };
 
   return (
@@ -57,20 +57,13 @@ function CardItem({ game, className }: CardItemProp) {
             <div className="text-md font-medium mb-2">
               {formatCurrency(Number(game.normalPrice))}
             </div>
-            <Rating
-              rate={Number(game.steamRatingPercent)}
-              reviews={game.steamRatingCount}
-            />
+            <Rating rate={Number(game.steamRatingPercent)} reviews={game.steamRatingCount} />
           </ContentBox>
         </CardActionArea>
         <ContentBox className="px-0 py-2">
           <Button
             size="lg"
-            variant={
-              gameItemFromCart
-                ? ButtonVariantsEnum.destructive
-                : ButtonVariantsEnum.default
-            }
+            variant={gameItemFromCart ? ButtonVariantsEnum.destructive : ButtonVariantsEnum.default}
             onClick={handleAddToCart}
           >
             {gameItemFromCart ? 'Remove from cart' : 'Add to cart'}

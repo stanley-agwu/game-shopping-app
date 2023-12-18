@@ -6,23 +6,16 @@ import { ButtonIconTypeEnum, ButtonProps } from '@/common/components/Button';
 
 import { cn } from '../lib/utils';
 
-const IconButton = forwardRef(
-  ({
-    className, children, onClick, ...props
-  }: ButtonProps, ref) => (
-    <button
-      {...props}
-      ref={ref as LegacyRef<HTMLButtonElement>}
-      className={cn(
-        'w-8, flex, justify-center, items-center, object-cover rounded-full',
-        className,
-      )}
-      onClick={onClick}
-    >
-      {children}
-    </button>
-  ),
-);
+const IconButton = forwardRef(({ className, children, onClick, ...props }: ButtonProps, ref) => (
+  <button
+    {...props}
+    ref={ref as LegacyRef<HTMLButtonElement>}
+    className={cn('w-8, flex, justify-center, items-center, object-cover rounded-full', className)}
+    onClick={onClick}
+  >
+    {children}
+  </button>
+));
 
 IconButton.displayName = 'IconButton';
 
@@ -36,7 +29,7 @@ export function ActionButton({ className, kind, onClick }: ButtonProps) {
             ? ' hover:bg-indigo-300 hover:border-indigo-600 active:bg-indigo-400'
             : ' hover:bg-red-300 hover:border-red-600 active:bg-red-400'
         }`,
-        className,
+        className
       )}
       onClick={onClick}
     >

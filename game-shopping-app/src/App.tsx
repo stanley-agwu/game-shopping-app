@@ -16,7 +16,7 @@ function App() {
       ...state,
       dispatch,
     }),
-    [dispatch, state],
+    [dispatch, state]
   );
   console.log({ memoizedContext });
 

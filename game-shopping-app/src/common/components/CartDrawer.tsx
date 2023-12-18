@@ -1,17 +1,7 @@
-import {
-  Dispatch,
-  HTMLAttributes,
-  KeyboardEvent,
-  MouseEvent,
-  ReactNode,
-} from 'react';
+import { Dispatch, HTMLAttributes, KeyboardEvent, MouseEvent, ReactNode } from 'react';
 
 import ActionButton from '@/common/components/ActionButton';
-import {
-  Button,
-  ButtonIconTypeEnum,
-  ButtonVariantsEnum,
-} from '@/common/components/Button';
+import { Button, ButtonIconTypeEnum, ButtonVariantsEnum } from '@/common/components/Button';
 import ContentBox, { GridContainer } from '@/common/components/ContentBox';
 import { ReducerAction } from '@/common/context/reducers/shopCartReducer';
 import { ActionTypeEnum } from '@/common/lib/action-types-enum';
@@ -48,7 +38,10 @@ export function GameCart({
   return (
     <Box
       width={{
-        xs: 280, sm: 400, md: 600, lg: 800,
+        xs: 280,
+        sm: 400,
+        md: 600,
+        lg: 800,
       }}
       role="presentation"
       onClick={toggleDrawer}
@@ -75,13 +68,9 @@ export function GameCart({
                     {cartItem.title}
                   </Box>
                   <Box className="mb-auto">
-                    X
-                    {' '}
-                    <span className="font-bold">{cartItem.quantity}</span>
+                    X <span className="font-bold">{cartItem.quantity}</span>
                   </Box>
-                  <Box className="w-full font-semibold">
-                    {formatCurrency(cartItem.price)}
-                  </Box>
+                  <Box className="w-full font-semibold">{formatCurrency(cartItem.price)}</Box>
                 </ContentBox>
               </ContentBox>
               <Box className="flex items-center justify-end p-2">
@@ -89,20 +78,24 @@ export function GameCart({
                   <Button
                     className="mr-3 text-xl"
                     variant={ButtonVariantsEnum.tertiary}
-                    onClick={() => dispatch({
-                      type: ActionTypeEnum.decreaseCartItem,
-                      payload: cartItem,
-                    })}
+                    onClick={() =>
+                      dispatch({
+                        type: ActionTypeEnum.decreaseCartItem,
+                        payload: cartItem,
+                      })
+                    }
                   >
                     -
                   </Button>
                   <Button
                     className="mr-3 text-xl"
                     variant={ButtonVariantsEnum.groom}
-                    onClick={() => dispatch({
-                      type: ActionTypeEnum.increaseCartItem,
-                      payload: cartItem,
-                    })}
+                    onClick={() =>
+                      dispatch({
+                        type: ActionTypeEnum.increaseCartItem,
+                        payload: cartItem,
+                      })
+                    }
                   >
                     +
                   </Button>
@@ -113,10 +106,12 @@ export function GameCart({
                   </span>
                   <ActionButton
                     kind={ButtonIconTypeEnum.delete}
-                    onClick={() => dispatch({
-                      type: ActionTypeEnum.removeCartItem,
-                      payload: cartItem,
-                    })}
+                    onClick={() =>
+                      dispatch({
+                        type: ActionTypeEnum.removeCartItem,
+                        payload: cartItem,
+                      })
+                    }
                   />
                 </Box>
               </Box>
@@ -137,9 +132,7 @@ export function GameCart({
             <Box className="min-w-full mt-8">
               <Button
                 className="min-w-full px-12"
-                onClick={(
-                  e: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>,
-                ) => {
+                onClick={(e: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) => {
                   dispatch({
                     type: ActionTypeEnum.resetCartItem,
                   });
@@ -172,12 +165,7 @@ function CartDrawer({
   return (
     <Box>
       {children}
-      <SwipeableDrawer
-        anchor="right"
-        open={isOpen}
-        onClose={onClose}
-        onOpen={toggleDrawer}
-      >
+      <SwipeableDrawer anchor="right" open={isOpen} onClose={onClose} onOpen={toggleDrawer}>
         <GameCart
           toggleDrawer={toggleDrawer}
           cartItems={cartItems}

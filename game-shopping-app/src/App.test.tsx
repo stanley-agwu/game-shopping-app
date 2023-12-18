@@ -11,7 +11,7 @@ describe('App', () => {
     render(
       <ShopContext.Provider value={memoizedContext.memoizedContext}>
         <App />
-      </ShopContext.Provider>,
+      </ShopContext.Provider>
     );
 
     expect(await screen.findByText('Game shop')).toBeDefined();

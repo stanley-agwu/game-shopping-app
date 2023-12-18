@@ -6,7 +6,7 @@ import { ShopCart } from '@/common/context/shopContext';
 export const usePersistState = (key: string, initialState: ShopCart) => {
   const [state, dispatch] = useReducer(shopCartReducer, initialState, () => {
     const storedCartItems = localStorage.getItem(key);
-    return storedCartItems ? JSON.parse(storedCartItems) as ShopCart : initialState;
+    return storedCartItems ? (JSON.parse(storedCartItems) as ShopCart) : initialState;
   });
 
   useEffect(() => {

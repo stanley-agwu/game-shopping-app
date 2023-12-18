@@ -6,6 +6,7 @@ interface IGameList {
   className?: string;
 }
 
-const ShopItem = ({ games, className }: IGameList) => games?.map((game) => <CardItem className={className} game={game} key={game.gameID} />);
+const ShopItem = ({ games, className }: IGameList) =>
+  games?.map((game) => <CardItem className={className} game={game} key={game.gameID} />);
 
 export default ShopItem;

@@ -1,6 +1,4 @@
-import {
-  KeyboardEvent, MouseEvent, MouseEventHandler, useState,
-} from 'react';
+import { KeyboardEvent, MouseEvent, MouseEventHandler, useState } from 'react';
 
 import LogoIcon from '@/assets/logo.svg';
 import ShoppingCartIcon from '@/assets/shopping-cart.svg';
@@ -17,17 +15,14 @@ import { useShopContext } from '@/common/context/shopContext';
 import ContentBox from './ContentBox';
 
 function NavigationMenu() {
-  const {
-    totalCartItemsQuantity, cartItems, totalCartItemsPrice, dispatch,
-  } = useShopContext();
+  const { totalCartItemsQuantity, cartItems, totalCartItemsPrice, dispatch } = useShopContext();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDrawer = (event: KeyboardEvent | MouseEvent) => {
     if (
-      event
-      && event.type === 'keydown'
-      && ((event as KeyboardEvent).key === 'Tab'
-        || (event as KeyboardEvent).key === 'Shift')
+      event &&
+      event.type === 'keydown' &&
+      ((event as KeyboardEvent).key === 'Tab' || (event as KeyboardEvent).key === 'Shift')
     ) {
       return;
     }
@@ -60,9 +55,7 @@ function NavigationMenu() {
           toggleDrawer={toggleDrawer}
         >
           <button
-            onClick={
-              toggleDrawer as unknown as MouseEventHandler<HTMLButtonElement>
-            }
+            onClick={toggleDrawer as unknown as MouseEventHandler<HTMLButtonElement>}
             className="list-none flex items-center relative"
           >
             <img

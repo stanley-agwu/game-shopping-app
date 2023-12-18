@@ -1,10 +1,4 @@
-import {
-  ClassAttributes,
-  forwardRef,
-  HTMLAttributes,
-  LegacyRef,
-  MutableRefObject,
-} from 'react';
+import { ClassAttributes, forwardRef, HTMLAttributes, LegacyRef, MutableRefObject } from 'react';
 
 import { Grid } from '@mui/material';
 
@@ -16,17 +10,11 @@ interface ContentBoxProps extends HTMLProps<HTMLDivElement> {
   className?: string;
 }
 
-const ContentBox = forwardRef(
-  ({ children, className, ...rest }: ContentBoxProps, ref) => (
-    <div
-      {...rest}
-      className={cn('w-full p-0 m-0', className)}
-      ref={ref as LegacyRef<HTMLDivElement>}
-    >
-      {children}
-    </div>
-  ),
-);
+const ContentBox = forwardRef(({ children, className, ...rest }: ContentBoxProps, ref) => (
+  <div {...rest} className={cn('w-full p-0 m-0', className)} ref={ref as LegacyRef<HTMLDivElement>}>
+    {children}
+  </div>
+));
 
 export default ContentBox;
 ContentBox.displayName = 'ContentBox';
@@ -40,7 +28,7 @@ export const ContentContainer = forwardRef(
     >
       {children}
     </div>
-  ),
+  )
 );
 
 ContentContainer.displayName = 'ContentContainer';
@@ -59,7 +47,7 @@ export const GridContent = forwardRef(
     >
       {children}
     </Grid>
-  ),
+  )
 );
 
 GridContent.displayName = 'GridContent';
@@ -74,7 +62,7 @@ export const GridContainer = forwardRef(
     >
       {children}
     </Grid>
-  ),
+  )
 );
 
 GridContainer.displayName = 'GridContainer';

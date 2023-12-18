@@ -15,17 +15,12 @@ interface WrapperProps {
 }
 
 const wrapper = ({ children, options }: WrapperProps): JSX.Element => (
-  <MemoryRouter {...options}>
-    {children}
-  </MemoryRouter>
+  <MemoryRouter {...options}>{children}</MemoryRouter>
 );
 
 const customRender = (
   ui: ReactElement,
-  {
-    routerProps = {},
-    ...renderOptions
-  }: ExtendedRenderOptions = {},
+  { routerProps = {}, ...renderOptions }: ExtendedRenderOptions = {}
 ) => render(ui, { wrapper, ...renderOptions });
 
 export * from '@testing-library/react';

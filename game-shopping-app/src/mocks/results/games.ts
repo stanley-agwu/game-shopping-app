@@ -28,7 +28,8 @@ const games = {
       releaseDate: 0,
       lastChange: 1702485379,
       dealRating: '10.0',
-      thumb: 'https://sttc.gamersgate.com/images/product/destiny-2-legacy-collection-2023/cover-180-a2867f.jpg',
+      thumb:
+        'https://sttc.gamersgate.com/images/product/destiny-2-legacy-collection-2023/cover-180-a2867f.jpg',
     },
     {
       internalName: 'REBELGALAXYANDREBELGALAXYOUTLAWDOUBLEPACK',
@@ -49,7 +50,8 @@ const games = {
       releaseDate: 0,
       lastChange: 1700584643,
       dealRating: '3.4',
-      thumb: 'https://cdn.fanatical.com/production/product/400x225/3d44d4eb-4c0e-4e76-ba85-844a74134134.jpeg',
+      thumb:
+        'https://cdn.fanatical.com/production/product/400x225/3d44d4eb-4c0e-4e76-ba85-844a74134134.jpeg',
     },
     {
       internalName: 'UNITYOFCOMMANDTRILOGYBUNDLE',
@@ -70,7 +72,8 @@ const games = {
       releaseDate: 0,
       lastChange: 1700584651,
       dealRating: '4.3',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/subs/39258/capsule_sm_120.jpg?t=1447453426',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/subs/39258/capsule_sm_120.jpg?t=1447453426',
     },
     {
       internalName: 'OVERLORDRAISINGHELL',
@@ -91,7 +94,8 @@ const games = {
       releaseDate: 1203033600,
       lastChange: 1682584886,
       dealRating: '0.0',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/12710/capsule_sm_120.jpg?t=1656371503',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/12710/capsule_sm_120.jpg?t=1656371503',
     },
     {
       internalName: 'WHALEROCKBUNDLE',
@@ -112,7 +116,8 @@ const games = {
       releaseDate: 0,
       lastChange: 1698051865,
       dealRating: '0.0',
-      thumb: 'https://hb.imgix.net/e318bed74e7c26b4c1ec832e06a4bb9d7e788bc4.jpg?auto=compress,format&fit=crop&h=84&w=135&s=fb4a48c9596d16671a5bfbbb5b8cc1f3',
+      thumb:
+        'https://hb.imgix.net/e318bed74e7c26b4c1ec832e06a4bb9d7e788bc4.jpg?auto=compress,format&fit=crop&h=84&w=135&s=fb4a48c9596d16671a5bfbbb5b8cc1f3',
     },
     {
       internalName: 'THECOOKSERVEDELICIOUSTRILOGY',
@@ -133,7 +138,8 @@ const games = {
       releaseDate: 0,
       lastChange: 1700584632,
       dealRating: '3.2',
-      thumb: 'https://cdn.fanatical.com/production/product/400x225/902a1e84-a425-4f1a-a61c-e339e66da879.jpeg',
+      thumb:
+        'https://cdn.fanatical.com/production/product/400x225/902a1e84-a425-4f1a-a61c-e339e66da879.jpeg',
     },
     {
       internalName: 'SLASHIT',
@@ -154,7 +160,8 @@ const games = {
       releaseDate: 1481932800,
       lastChange: 1702398998,
       dealRating: '1.9',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/567290/capsule_sm_120.jpg?t=1696796727',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/567290/capsule_sm_120.jpg?t=1696796727',
     },
     {
       internalName: 'DUKEOFALPHACENTAURI',
@@ -175,7 +182,8 @@ const games = {
       releaseDate: 1482883200,
       lastChange: 1702402155,
       dealRating: '1.9',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/567580/capsule_sm_120.jpg?t=1696796788',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/567580/capsule_sm_120.jpg?t=1696796788',
     },
     {
       internalName: 'SLASHIT2',
@@ -196,7 +204,8 @@ const games = {
       releaseDate: 1485216000,
       lastChange: 1702398957,
       dealRating: '1.9',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/583760/capsule_sm_120.jpg?t=1696796730',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/583760/capsule_sm_120.jpg?t=1696796730',
     },
     {
       internalName: 'UPSIDEDOWN',
@@ -217,7 +226,8 @@ const games = {
       releaseDate: 1487030400,
       lastChange: 1702399026,
       dealRating: '1.9',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/586960/capsule_sm_120.jpg?t=1696796863',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/586960/capsule_sm_120.jpg?t=1696796863',
     },
     {
       internalName: 'SLASHITULTIMATE',
@@ -238,7 +248,8 @@ const games = {
       releaseDate: 1499990400,
       lastChange: 1702402071,
       dealRating: '1.9',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/656600/capsule_sm_120.jpg?t=1696796772',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/656600/capsule_sm_120.jpg?t=1696796772',
     },
     {
       internalName: 'POLYISLAND',
@@ -259,7 +270,8 @@ const games = {
       releaseDate: 1545955200,
       lastChange: 1702399628,
       dealRating: '0.0',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/739360/capsule_sm_120.jpg?t=1696796775',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/739360/capsule_sm_120.jpg?t=1696796775',
     },
     {
       internalName: 'HELICOPTER20',
@@ -280,7 +292,8 @@ const games = {
       releaseDate: 1641168000,
       lastChange: 1702492058,
       dealRating: '0.0',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1849930/capsule_sm_120.jpg?t=1659012581',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/1849930/capsule_sm_120.jpg?t=1659012581',
     },
     {
       internalName: 'SCALEPLANET',
@@ -301,7 +314,8 @@ const games = {
       releaseDate: 1653350400,
       lastChange: 1702492191,
       dealRating: '0.0',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1922360/capsule_sm_120.jpg?t=1660745571',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/1922360/capsule_sm_120.jpg?t=1660745571',
     },
     {
       internalName: 'ITTLEDEW1AND2DOUBLEPACK',
@@ -322,7 +336,8 @@ const games = {
       releaseDate: 0,
       lastChange: 1700584632,
       dealRating: '3.2',
-      thumb: 'https://cdn.fanatical.com/production/product/400x225/eff8e465-225d-47b2-88e3-2995dc16509e.jpeg',
+      thumb:
+        'https://cdn.fanatical.com/production/product/400x225/eff8e465-225d-47b2-88e3-2995dc16509e.jpeg',
     },
     {
       internalName: 'DANGERZOMBIES',
@@ -343,7 +358,8 @@ const games = {
       releaseDate: 1631232000,
       lastChange: 1689347851,
       dealRating: '0.0',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1284150/capsule_sm_120.jpg?t=1589656649',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/1284150/capsule_sm_120.jpg?t=1589656649',
     },
     {
       internalName: 'CEMETERYWAR',
@@ -364,7 +380,8 @@ const games = {
       releaseDate: 1591574400,
       lastChange: 1689351101,
       dealRating: '0.0',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1306860/capsule_sm_120.jpg?t=1591591845',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/1306860/capsule_sm_120.jpg?t=1591591845',
     },
     {
       internalName: 'DANGEROUSPLANE',
@@ -385,7 +402,8 @@ const games = {
       releaseDate: 1615248000,
       lastChange: 1689351100,
       dealRating: '0.0',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1284140/capsule_sm_120.jpg?t=1615304080',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/1284140/capsule_sm_120.jpg?t=1615304080',
     },
     {
       internalName: 'SEAWAR',
@@ -406,7 +424,8 @@ const games = {
       releaseDate: 1615939200,
       lastChange: 1689351103,
       dealRating: '0.0',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1306850/capsule_sm_120.jpg?t=1616006873',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/1306850/capsule_sm_120.jpg?t=1616006873',
     },
     {
       internalName: 'ODDWORLDNEWNTASTYWITHALFANDABEDLCPACKS',
@@ -427,7 +446,8 @@ const games = {
       releaseDate: 0,
       lastChange: 1700584631,
       dealRating: '3.2',
-      thumb: 'https://cdn.fanatical.com/production/product/400x225/f336c57a-7c29-476d-b796-33a70efb3845.jpeg',
+      thumb:
+        'https://cdn.fanatical.com/production/product/400x225/f336c57a-7c29-476d-b796-33a70efb3845.jpeg',
     },
     {
       internalName: 'XCOM2',
@@ -448,7 +468,8 @@ const games = {
       releaseDate: 1454544000,
       lastChange: 1702604285,
       dealRating: '0.0',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/268500/capsule_sm_120.jpg?t=1646157374',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/268500/capsule_sm_120.jpg?t=1646157374',
     },
     {
       internalName: 'COOKSERVEDELICIOUS1AND2DOUBLEPACK',
@@ -469,7 +490,8 @@ const games = {
       releaseDate: 0,
       lastChange: 1700584944,
       dealRating: '3.2',
-      thumb: 'https://cdn.fanatical.com/production/product/400x225/157d29cc-814e-45b9-8c79-c4fa6957ed8b.jpeg',
+      thumb:
+        'https://cdn.fanatical.com/production/product/400x225/157d29cc-814e-45b9-8c79-c4fa6957ed8b.jpeg',
     },
     {
       internalName: 'LEARNJAPANESETOSURVIVETRILOGY',
@@ -490,7 +512,8 @@ const games = {
       releaseDate: 0,
       lastChange: 1700584636,
       dealRating: '3.2',
-      thumb: 'https://cdn.fanatical.com/production/product/400x225/d408347a-087b-4562-bdae-5d72be244507.jpeg',
+      thumb:
+        'https://cdn.fanatical.com/production/product/400x225/d408347a-087b-4562-bdae-5d72be244507.jpeg',
     },
     {
       internalName: 'WORDLE',
@@ -511,7 +534,8 @@ const games = {
       releaseDate: 0,
       lastChange: 1701718687,
       dealRating: '6.0',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1334000/capsule_sm_120.jpg?t=1676735078',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/1334000/capsule_sm_120.jpg?t=1676735078',
     },
     {
       internalName: 'THEREDHOOD',
@@ -532,7 +556,8 @@ const games = {
       releaseDate: 1647216000,
       lastChange: 1701373389,
       dealRating: '1.4',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1900970/capsule_sm_120.jpg?t=1696715799',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/1900970/capsule_sm_120.jpg?t=1696715799',
     },
     {
       internalName: 'KHOLAT',
@@ -553,7 +578,8 @@ const games = {
       releaseDate: 1433808000,
       lastChange: 1702645045,
       dealRating: '8.9',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/343710/capsule_sm_120.jpg?t=1589292099',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/343710/capsule_sm_120.jpg?t=1589292099',
     },
     {
       internalName: 'ODDWORLDORIGINALSPACK',
@@ -574,7 +600,8 @@ const games = {
       releaseDate: 0,
       lastChange: 1700584630,
       dealRating: '3.1',
-      thumb: 'https://cdn.fanatical.com/production/product/400x225/1a562b27-f35d-4eca-9135-933dd9632747.jpeg',
+      thumb:
+        'https://cdn.fanatical.com/production/product/400x225/1a562b27-f35d-4eca-9135-933dd9632747.jpeg',
     },
     {
       internalName: 'JUSTCAUSE3MECHLANDASSAULT',
@@ -595,7 +622,8 @@ const games = {
       releaseDate: 1465516800,
       lastChange: 1700646421,
       dealRating: '0.7',
-      thumb: 'https://images.greenmangaming.com/a9fb3ab8759f4302afee8b8ca8794de5/bc18b505fa4c4160b32ff8d4af6e96af.jpg',
+      thumb:
+        'https://images.greenmangaming.com/a9fb3ab8759f4302afee8b8ca8794de5/bc18b505fa4c4160b32ff8d4af6e96af.jpg',
     },
     {
       internalName: 'WEARETHEDWARVES',
@@ -616,7 +644,8 @@ const games = {
       releaseDate: 1456358400,
       lastChange: 1702478135,
       dealRating: '8.4',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/395570/capsule_sm_120.jpg?t=1682423383',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/395570/capsule_sm_120.jpg?t=1682423383',
     },
     {
       internalName: 'INNERSPACE',
@@ -637,7 +666,8 @@ const games = {
       releaseDate: 1516060800,
       lastChange: 1702485526,
       dealRating: '8.6',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/347000/capsule_sm_120.jpg?t=1680629656',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/347000/capsule_sm_120.jpg?t=1680629656',
     },
   ],
   fulfilledTimeStamp: 1702908091072,
@@ -665,7 +695,8 @@ const games = {
       releaseDate: 0,
       lastChange: 1702485379,
       dealRating: '10.0',
-      thumb: 'https://sttc.gamersgate.com/images/product/destiny-2-legacy-collection-2023/cover-180-a2867f.jpg',
+      thumb:
+        'https://sttc.gamersgate.com/images/product/destiny-2-legacy-collection-2023/cover-180-a2867f.jpg',
     },
     {
       internalName: 'REBELGALAXYANDREBELGALAXYOUTLAWDOUBLEPACK',
@@ -686,7 +717,8 @@ const games = {
       releaseDate: 0,
       lastChange: 1700584643,
       dealRating: '3.4',
-      thumb: 'https://cdn.fanatical.com/production/product/400x225/3d44d4eb-4c0e-4e76-ba85-844a74134134.jpeg',
+      thumb:
+        'https://cdn.fanatical.com/production/product/400x225/3d44d4eb-4c0e-4e76-ba85-844a74134134.jpeg',
     },
     {
       internalName: 'UNITYOFCOMMANDTRILOGYBUNDLE',
@@ -707,7 +739,8 @@ const games = {
       releaseDate: 0,
       lastChange: 1700584651,
       dealRating: '4.3',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/subs/39258/capsule_sm_120.jpg?t=1447453426',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/subs/39258/capsule_sm_120.jpg?t=1447453426',
     },
     {
       internalName: 'OVERLORDRAISINGHELL',
@@ -728,7 +761,8 @@ const games = {
       releaseDate: 1203033600,
       lastChange: 1682584886,
       dealRating: '0.0',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/12710/capsule_sm_120.jpg?t=1656371503',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/12710/capsule_sm_120.jpg?t=1656371503',
     },
     {
       internalName: 'WHALEROCKBUNDLE',
@@ -749,7 +783,8 @@ const games = {
       releaseDate: 0,
       lastChange: 1698051865,
       dealRating: '0.0',
-      thumb: 'https://hb.imgix.net/e318bed74e7c26b4c1ec832e06a4bb9d7e788bc4.jpg?auto=compress,format&fit=crop&h=84&w=135&s=fb4a48c9596d16671a5bfbbb5b8cc1f3',
+      thumb:
+        'https://hb.imgix.net/e318bed74e7c26b4c1ec832e06a4bb9d7e788bc4.jpg?auto=compress,format&fit=crop&h=84&w=135&s=fb4a48c9596d16671a5bfbbb5b8cc1f3',
     },
     {
       internalName: 'THECOOKSERVEDELICIOUSTRILOGY',
@@ -770,7 +805,8 @@ const games = {
       releaseDate: 0,
       lastChange: 1700584632,
       dealRating: '3.2',
-      thumb: 'https://cdn.fanatical.com/production/product/400x225/902a1e84-a425-4f1a-a61c-e339e66da879.jpeg',
+      thumb:
+        'https://cdn.fanatical.com/production/product/400x225/902a1e84-a425-4f1a-a61c-e339e66da879.jpeg',
     },
     {
       internalName: 'SLASHIT',
@@ -791,7 +827,8 @@ const games = {
       releaseDate: 1481932800,
       lastChange: 1702398998,
       dealRating: '1.9',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/567290/capsule_sm_120.jpg?t=1696796727',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/567290/capsule_sm_120.jpg?t=1696796727',
     },
     {
       internalName: 'DUKEOFALPHACENTAURI',
@@ -812,7 +849,8 @@ const games = {
       releaseDate: 1482883200,
       lastChange: 1702402155,
       dealRating: '1.9',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/567580/capsule_sm_120.jpg?t=1696796788',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/567580/capsule_sm_120.jpg?t=1696796788',
     },
     {
       internalName: 'SLASHIT2',
@@ -833,7 +871,8 @@ const games = {
       releaseDate: 1485216000,
       lastChange: 1702398957,
       dealRating: '1.9',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/583760/capsule_sm_120.jpg?t=1696796730',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/583760/capsule_sm_120.jpg?t=1696796730',
     },
     {
       internalName: 'UPSIDEDOWN',
@@ -854,7 +893,8 @@ const games = {
       releaseDate: 1487030400,
       lastChange: 1702399026,
       dealRating: '1.9',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/586960/capsule_sm_120.jpg?t=1696796863',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/586960/capsule_sm_120.jpg?t=1696796863',
     },
     {
       internalName: 'SLASHITULTIMATE',
@@ -875,7 +915,8 @@ const games = {
       releaseDate: 1499990400,
       lastChange: 1702402071,
       dealRating: '1.9',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/656600/capsule_sm_120.jpg?t=1696796772',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/656600/capsule_sm_120.jpg?t=1696796772',
     },
     {
       internalName: 'POLYISLAND',
@@ -896,7 +937,8 @@ const games = {
       releaseDate: 1545955200,
       lastChange: 1702399628,
       dealRating: '0.0',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/739360/capsule_sm_120.jpg?t=1696796775',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/739360/capsule_sm_120.jpg?t=1696796775',
     },
     {
       internalName: 'HELICOPTER20',
@@ -917,7 +959,8 @@ const games = {
       releaseDate: 1641168000,
       lastChange: 1702492058,
       dealRating: '0.0',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1849930/capsule_sm_120.jpg?t=1659012581',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/1849930/capsule_sm_120.jpg?t=1659012581',
     },
     {
       internalName: 'SCALEPLANET',
@@ -938,7 +981,8 @@ const games = {
       releaseDate: 1653350400,
       lastChange: 1702492191,
       dealRating: '0.0',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1922360/capsule_sm_120.jpg?t=1660745571',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/1922360/capsule_sm_120.jpg?t=1660745571',
     },
     {
       internalName: 'ITTLEDEW1AND2DOUBLEPACK',
@@ -959,7 +1003,8 @@ const games = {
       releaseDate: 0,
       lastChange: 1700584632,
       dealRating: '3.2',
-      thumb: 'https://cdn.fanatical.com/production/product/400x225/eff8e465-225d-47b2-88e3-2995dc16509e.jpeg',
+      thumb:
+        'https://cdn.fanatical.com/production/product/400x225/eff8e465-225d-47b2-88e3-2995dc16509e.jpeg',
     },
     {
       internalName: 'DANGERZOMBIES',
@@ -980,7 +1025,8 @@ const games = {
       releaseDate: 1631232000,
       lastChange: 1689347851,
       dealRating: '0.0',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1284150/capsule_sm_120.jpg?t=1589656649',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/1284150/capsule_sm_120.jpg?t=1589656649',
     },
     {
       internalName: 'CEMETERYWAR',
@@ -1001,7 +1047,8 @@ const games = {
       releaseDate: 1591574400,
       lastChange: 1689351101,
       dealRating: '0.0',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1306860/capsule_sm_120.jpg?t=1591591845',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/1306860/capsule_sm_120.jpg?t=1591591845',
     },
     {
       internalName: 'DANGEROUSPLANE',
@@ -1022,7 +1069,8 @@ const games = {
       releaseDate: 1615248000,
       lastChange: 1689351100,
       dealRating: '0.0',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1284140/capsule_sm_120.jpg?t=1615304080',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/1284140/capsule_sm_120.jpg?t=1615304080',
     },
     {
       internalName: 'SEAWAR',
@@ -1043,7 +1091,8 @@ const games = {
       releaseDate: 1615939200,
       lastChange: 1689351103,
       dealRating: '0.0',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1306850/capsule_sm_120.jpg?t=1616006873',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/1306850/capsule_sm_120.jpg?t=1616006873',
     },
     {
       internalName: 'ODDWORLDNEWNTASTYWITHALFANDABEDLCPACKS',
@@ -1064,7 +1113,8 @@ const games = {
       releaseDate: 0,
       lastChange: 1700584631,
       dealRating: '3.2',
-      thumb: 'https://cdn.fanatical.com/production/product/400x225/f336c57a-7c29-476d-b796-33a70efb3845.jpeg',
+      thumb:
+        'https://cdn.fanatical.com/production/product/400x225/f336c57a-7c29-476d-b796-33a70efb3845.jpeg',
     },
     {
       internalName: 'XCOM2',
@@ -1085,7 +1135,8 @@ const games = {
       releaseDate: 1454544000,
       lastChange: 1702604285,
       dealRating: '0.0',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/268500/capsule_sm_120.jpg?t=1646157374',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/268500/capsule_sm_120.jpg?t=1646157374',
     },
     {
       internalName: 'COOKSERVEDELICIOUS1AND2DOUBLEPACK',
@@ -1106,7 +1157,8 @@ const games = {
       releaseDate: 0,
       lastChange: 1700584944,
       dealRating: '3.2',
-      thumb: 'https://cdn.fanatical.com/production/product/400x225/157d29cc-814e-45b9-8c79-c4fa6957ed8b.jpeg',
+      thumb:
+        'https://cdn.fanatical.com/production/product/400x225/157d29cc-814e-45b9-8c79-c4fa6957ed8b.jpeg',
     },
     {
       internalName: 'LEARNJAPANESETOSURVIVETRILOGY',
@@ -1127,7 +1179,8 @@ const games = {
       releaseDate: 0,
       lastChange: 1700584636,
       dealRating: '3.2',
-      thumb: 'https://cdn.fanatical.com/production/product/400x225/d408347a-087b-4562-bdae-5d72be244507.jpeg',
+      thumb:
+        'https://cdn.fanatical.com/production/product/400x225/d408347a-087b-4562-bdae-5d72be244507.jpeg',
     },
     {
       internalName: 'WORDLE',
@@ -1148,7 +1201,8 @@ const games = {
       releaseDate: 0,
       lastChange: 1701718687,
       dealRating: '6.0',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1334000/capsule_sm_120.jpg?t=1676735078',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/1334000/capsule_sm_120.jpg?t=1676735078',
     },
     {
       internalName: 'THEREDHOOD',
@@ -1169,7 +1223,8 @@ const games = {
       releaseDate: 1647216000,
       lastChange: 1701373389,
       dealRating: '1.4',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1900970/capsule_sm_120.jpg?t=1696715799',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/1900970/capsule_sm_120.jpg?t=1696715799',
     },
     {
       internalName: 'KHOLAT',
@@ -1190,7 +1245,8 @@ const games = {
       releaseDate: 1433808000,
       lastChange: 1702645045,
       dealRating: '8.9',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/343710/capsule_sm_120.jpg?t=1589292099',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/343710/capsule_sm_120.jpg?t=1589292099',
     },
     {
       internalName: 'ODDWORLDORIGINALSPACK',
@@ -1211,7 +1267,8 @@ const games = {
       releaseDate: 0,
       lastChange: 1700584630,
       dealRating: '3.1',
-      thumb: 'https://cdn.fanatical.com/production/product/400x225/1a562b27-f35d-4eca-9135-933dd9632747.jpeg',
+      thumb:
+        'https://cdn.fanatical.com/production/product/400x225/1a562b27-f35d-4eca-9135-933dd9632747.jpeg',
     },
     {
       internalName: 'JUSTCAUSE3MECHLANDASSAULT',
@@ -1232,7 +1289,8 @@ const games = {
       releaseDate: 1465516800,
       lastChange: 1700646421,
       dealRating: '0.7',
-      thumb: 'https://images.greenmangaming.com/a9fb3ab8759f4302afee8b8ca8794de5/bc18b505fa4c4160b32ff8d4af6e96af.jpg',
+      thumb:
+        'https://images.greenmangaming.com/a9fb3ab8759f4302afee8b8ca8794de5/bc18b505fa4c4160b32ff8d4af6e96af.jpg',
     },
     {
       internalName: 'WEARETHEDWARVES',
@@ -1253,7 +1311,8 @@ const games = {
       releaseDate: 1456358400,
       lastChange: 1702478135,
       dealRating: '8.4',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/395570/capsule_sm_120.jpg?t=1682423383',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/395570/capsule_sm_120.jpg?t=1682423383',
     },
     {
       internalName: 'INNERSPACE',
@@ -1274,7 +1333,8 @@ const games = {
       releaseDate: 1516060800,
       lastChange: 1702485526,
       dealRating: '8.6',
-      thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/347000/capsule_sm_120.jpg?t=1680629656',
+      thumb:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/347000/capsule_sm_120.jpg?t=1680629656',
     },
   ],
   isFetching: true,
