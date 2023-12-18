@@ -17,18 +17,9 @@ export const useInfiniteScroll = <T>(
     additionalOptions
   );
 
-  console.log({ queryResponse });
-
   const data = queryResponse?.data as T[];
   const last = !queryResponse.currentData && !queryResponse.error && !queryResponse.isLoading;
   const hasMore = !last;
-  console.log({
-    data,
-    allData,
-    pageNumber,
-    hasMore,
-    queryResponse,
-  });
 
   useEffect(() => {
     setCurrentQueryParameters(queryParameters);

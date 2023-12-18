@@ -6,7 +6,7 @@ import '@/common/lib/extension';
 
 import { usePersistState } from './common/context/hook';
 import ShopContext, { initialState } from './common/context/shopContext';
-import Shop from './modules/shop/components/Shop';
+import Shop from './modules/shop/Shop';
 
 function App() {
   const { state, dispatch } = usePersistState('gameCart', initialState);
@@ -18,7 +18,6 @@ function App() {
     }),
     [dispatch, state]
   );
-  console.log({ memoizedContext });
 
   return (
     <ShopContext.Provider value={memoizedContext}>

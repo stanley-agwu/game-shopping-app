@@ -14,6 +14,16 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
     setupFiles: './src/setupTests.ts',
+    deps: {
+      inline: ['vitest-canvas-mock'],
+    },
+    // For this config, check https://github.com/vitest-dev/vitest/issues/740
+    threads: false,
+    environmentOptions: {
+      jsdom: {
+        resources: 'usable',
+      },
+    },
     coverage: {
       provider: 'v8',
       reporter: ['text', 'json', 'html'],

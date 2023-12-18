@@ -1,5 +1,5 @@
 import { IGame } from '@/common/models';
-import CardItem from '@/modules/shop/components/components/CardItem';
+import CardItem from '@/modules/shop/components/CardItem';
 
 interface IGameList {
   games: IGame[] | undefined;

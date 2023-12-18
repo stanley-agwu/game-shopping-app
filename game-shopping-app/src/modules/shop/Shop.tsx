@@ -21,7 +21,7 @@ function Shop() {
       </ContentBox>
     );
   }
-  console.log({ allData });
+
   return (
     <GridContainer>
       <InfiniteScroll
@@ -29,7 +29,6 @@ function Shop() {
         next={readMore}
         hasMore={hasMore}
         loader={<Loader />}
-        scrollThreshold={1.0}
         className="flex flex-wrap content-center"
       >
         <ShopItem className="w-full" games={allData} />

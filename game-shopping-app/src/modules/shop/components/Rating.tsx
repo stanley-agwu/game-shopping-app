@@ -2,7 +2,7 @@
 import RateIcon from '@/assets/star-empty.svg';
 import RateFillIcon from '@/assets/star-filled.svg';
 
-import { getRating } from '../../utils/shop-utils';
+import { getRating } from '../utils/shop-utils';
 
 interface RatingProps {
   rate: number;

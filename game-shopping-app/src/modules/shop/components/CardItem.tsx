@@ -4,7 +4,7 @@ import { useShopContext } from '@/common/context/shopContext';
 import { ActionTypeEnum } from '@/common/lib/action-types-enum';
 import { formatCurrency, getItemFromCart } from '@/common/lib/utils';
 import { ICartItem, IGame } from '@/common/models';
-import Rating from '@/modules/shop/components/components/Rating';
+import Rating from '@/modules/shop/components/Rating';
 import { CardActionArea } from '@mui/material';
 
 interface CardItemProp {
