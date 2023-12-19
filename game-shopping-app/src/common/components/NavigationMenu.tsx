@@ -38,7 +38,7 @@ function NavigationMenu() {
   return (
     <NavigationUiMenu className="flex justify-between px-6 py-2">
       <NavigationMenuList>
-        <img src={LogoIcon} width="28" height="28" />
+        <img src={LogoIcon as string} width="28" height="28" />
         <NavigationMenuItem>
           <NavigationMenuLink className={navigationMenuTriggerStyle()}>
             Game shop
@@ -59,7 +59,7 @@ function NavigationMenu() {
             className="list-none flex items-center relative"
           >
             <img
-              src={ShoppingCartIcon}
+              src={ShoppingCartIcon as string}
               className="bg-slate-100 rounded-full p-2 cursor-pointer border border-indigo-600 hover:bg-indigo-300 hover:fill-white hover:border-2 focus:bg-indigo-300 focus:fill-white focus:border-2"
             />
             <div

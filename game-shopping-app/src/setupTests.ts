@@ -3,9 +3,10 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import { fetch } from 'cross-fetch';
-import 'vitest-canvas-mock'
 
 import { server } from '@/mocks/server';
+
+import 'vitest-canvas-mock';
 // import matchers from '@testing-library/jest-dom/matchers';
 // import { expect } from 'vitest';
 

@@ -13,8 +13,12 @@ function Rating({ rate, reviews }: RatingProps) {
   const rating = getRating(rate);
   return (
     <div className="flex py-2 items-center">
-      {[...Array(5)].map((_, idx) =>
-        rating > idx ? <img src={RateFillIcon} key={idx} /> : <img src={RateIcon} key={idx} />
+      {[...Array(5)].map((idx: number) =>
+        rating > idx ? (
+          <img src={RateFillIcon as string} key={idx} />
+        ) : (
+          <img src={RateIcon as string} key={idx} />
+        )
       )}
       <span className="ml-4 font-medium text-sm">{reviews} reviews</span>
     </div>

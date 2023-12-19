@@ -45,8 +45,9 @@ module.exports = {
     'import/first': 2,
     'import/newline-after-import': 2,
     'import/no-duplicates': 2,
+    'no-unused-vars': 2,
     'sort-imports': 0,
-    'import/order': 0,
+    'import/order': 2,
     '@typescript-eslint/naming-convention': [
       1,
       {
