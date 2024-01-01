@@ -22,16 +22,22 @@ function Shop() {
     );
   }
 
+  const gameIdsConfig = allData.reduce(
+    (cum: { [key: string]: string }, curr: IGame) => ({ ...cum, [curr.gameID]: curr.dealID }),
+    {}
+  );
+  const filterData = allData.filter((game) => gameIdsConfig[game.gameID] === game.dealID);
+
   return (
     <GridContainer>
       <InfiniteScroll
-        dataLength={allData?.length || 0}
+        dataLength={filterData?.length || 0}
         next={readMore}
         hasMore={hasMore}
         loader={<Loader />}
         className="flex flex-wrap content-center"
       >
-        <ShopItem className="w-full" games={allData} />
+        <ShopItem className="w-full" games={filterData} />
       </InfiniteScroll>
     </GridContainer>
   );
