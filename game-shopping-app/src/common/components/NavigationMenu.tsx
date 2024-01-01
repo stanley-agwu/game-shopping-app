@@ -1,4 +1,11 @@
-import { KeyboardEvent, MouseEvent, MouseEventHandler, useState } from 'react';
+import {
+  forwardRef,
+  KeyboardEvent,
+  MouseEvent,
+  MouseEventHandler,
+  MutableRefObject,
+  useState,
+} from 'react';
 
 import LogoIcon from '@/assets/logo.svg';
 import ShoppingCartIcon from '@/assets/shopping-cart.svg';
@@ -14,7 +21,7 @@ import { useShopContext } from '@/common/context/shopContext';
 
 import ContentBox from './ContentBox';
 
-function NavigationMenu() {
+const NavigationMenu = forwardRef<MutableRefObject<HTMLDivElement | null>, any>((props, ref) => {
   const { totalCartItemsQuantity, cartItems, totalCartItemsPrice, dispatch } = useShopContext();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -36,9 +43,9 @@ function NavigationMenu() {
   };
 
   return (
-    <NavigationUiMenu className="flex justify-between px-6 py-2">
+    <NavigationUiMenu {...props} ref={ref} className="flex justify-between px-6 py-2">
       <NavigationMenuList>
-        <img src={LogoIcon as string} width="28" height="28" />
+        <img src={LogoIcon as string} width="28" height="28" alt="Logo" />
         <NavigationMenuItem>
           <NavigationMenuLink className={navigationMenuTriggerStyle()}>
             Game shop
@@ -60,6 +67,7 @@ function NavigationMenu() {
           >
             <img
               src={ShoppingCartIcon as string}
+              alt="Shopping cart"
               className="bg-slate-100 rounded-full p-2 cursor-pointer border border-indigo-600 hover:bg-indigo-300 hover:fill-white hover:border-2 focus:bg-indigo-300 focus:fill-white focus:border-2"
             />
             <div
@@ -73,6 +81,6 @@ function NavigationMenu() {
       </ContentBox>
     </NavigationUiMenu>
   );
-}
+});
 
 export default NavigationMenu;

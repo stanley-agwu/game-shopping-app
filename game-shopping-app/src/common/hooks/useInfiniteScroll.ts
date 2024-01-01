@@ -2,9 +2,11 @@ import { useCallback, useEffect, useState } from 'react';
 
 import { UseQuery } from '@reduxjs/toolkit/dist/query/react/buildHooks';
 
+export const PAGE_SIZE = 30;
+
 export const useInfiniteScroll = <T>(
   useGetListDataQuery: UseQuery<any>,
-  { pageSize = 30, ...queryParameters },
+  { pageSize = PAGE_SIZE, ...queryParameters },
   additionalOptions?: any,
   cache?: boolean
 ) => {
