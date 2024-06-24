@@ -4,6 +4,7 @@ import {
   MouseEvent,
   MouseEventHandler,
   MutableRefObject,
+  SyntheticEvent,
   useState,
 } from 'react';
 
@@ -25,7 +26,7 @@ const NavigationMenu = forwardRef<MutableRefObject<HTMLDivElement | null>, any>(
   const { totalCartItemsQuantity, cartItems, totalCartItemsPrice, dispatch } = useShopContext();
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleDrawer = (event: KeyboardEvent | MouseEvent) => {
+  const toggleDrawer = (event: KeyboardEvent | SyntheticEvent<{}, Event>) => {
     if (
       event &&
       event.type === 'keydown' &&
@@ -62,7 +63,7 @@ const NavigationMenu = forwardRef<MutableRefObject<HTMLDivElement | null>, any>(
           toggleDrawer={toggleDrawer}
         >
           <button
-            onClick={toggleDrawer as unknown as MouseEventHandler<HTMLButtonElement>}
+            onClick={toggleDrawer as MouseEventHandler<HTMLButtonElement>}
             className="list-none flex items-center relative"
           >
             <img

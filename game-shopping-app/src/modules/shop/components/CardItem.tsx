@@ -43,6 +43,7 @@ function CardItem({ game, className }: CardItemProp) {
             <img
               src={game.thumb}
               alt={game.title}
+              loading="lazy"
               width="100%"
               style={{
                 objectFit: 'cover',
