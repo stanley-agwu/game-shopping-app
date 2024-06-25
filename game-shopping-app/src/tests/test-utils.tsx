@@ -2,7 +2,9 @@ import { ReactElement, ReactNode } from 'react';
 import { MemoryRouterProps } from 'react-router';
 import { MemoryRouter } from 'react-router-dom';
 
-import { render, type RenderOptions } from '@testing-library/react';
+import { afterEach } from 'vitest';
+
+import { render, type RenderOptions, cleanup } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 interface ExtendedRenderOptions extends Omit<RenderOptions, 'wrapper'> {
@@ -13,6 +15,10 @@ interface WrapperProps {
   children?: ReactNode;
   options?: ExtendedRenderOptions;
 }
+
+afterEach(() => {
+  cleanup();
+});
 
 const wrapper = ({ children, options }: WrapperProps): JSX.Element => (
   <MemoryRouter {...options}>{children}</MemoryRouter>
