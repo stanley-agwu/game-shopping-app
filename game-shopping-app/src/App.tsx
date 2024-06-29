@@ -4,10 +4,10 @@ import NavigationMenu from '@/common/components/NavigationMenu';
 
 import '@/common/lib/extension';
 
-import { usePersistState } from './common/context/hook';
-import ShopContext, { initialState } from './common/context/shopContext';
-import Shop from './modules/shop/Shop';
-import { useScrollTop } from './common/hooks/useScrollTop';
+import { usePersistState } from '@/common/context/hook';
+import ShopContext, { initialState } from '@/common/context/shopContext';
+import Shop from '@/modules/shop/Shop';
+import { useScrollTop } from '@/common/hooks/useScrollTop';
 
 function App() {
   const { state, dispatch } = usePersistState('gameCart', initialState);
