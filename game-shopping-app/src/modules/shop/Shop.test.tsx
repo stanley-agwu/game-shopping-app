@@ -1,21 +1,14 @@
 import { describe, expect, it } from 'vitest';
 
-import ShopContext from '@/common/context/shopContext';
-import memoizedContext from '@/mocks/results/context';
 import { render, screen } from '@/tests/test-utils';
 
 import Shop from './Shop';
 
 describe('App', () => {
   const handleScroll = vi.fn();
-  const dispatch = vi.fn();
-  it.skip('renders App', async () => {
-    render(
-      <ShopContext.Provider value={{ ...memoizedContext.memoizedContext, dispatch }}>
-        <Shop handleScroll={handleScroll} isIndexView={false} />
-      </ShopContext.Provider>
-    );
+  it('Shop', async () => {
+    render(<Shop handleScroll={handleScroll} isIndexView={false} />);
 
-    expect(await screen.findByText('Game shop')).toBeDefined();
+    expect(await screen.findByText('Destiny 2: Legacy Collection (2023)')).toBeInTheDocument();
   });
 });

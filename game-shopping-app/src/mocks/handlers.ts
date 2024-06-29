@@ -1,9 +1,9 @@
 import { http, HttpResponse } from 'msw';
 
-import { coreConfig } from '@/common/core/config';
-
 import games from './results/games';
 
+const gamesUrl = 'https://www.cheapshark.com/api/1.0/deals';
+
 export const handlers = [
-  http.get(coreConfig.endpoints.games, () => HttpResponse.json(games, { status: 200 })),
+  http.get(gamesUrl, () => HttpResponse.json(games, { status: 200 })),
 ];
