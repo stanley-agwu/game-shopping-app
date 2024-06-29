@@ -7,10 +7,6 @@ import { fetch } from 'cross-fetch';
 import { server } from '@/mocks/server';
 
 import 'vitest-canvas-mock';
-// import matchers from '@testing-library/jest-dom/matchers';
-// import { expect } from 'vitest';
-
-// expect.extend(matchers);
 
 // Add `fetch` polyfill.
 global.fetch = fetch;

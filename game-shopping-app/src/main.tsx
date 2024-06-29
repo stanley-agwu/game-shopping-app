@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 
 import App from './App.tsx';
-import { setupStore } from './common/api/store/store.ts';
+import { setupStore } from '@/common/api/store/store.ts';
 
 import './index.scss';
-import startBrowserMsw from './mocks/browser.dev.ts';
+import startBrowserMsw from '@/mocks/browser.dev.ts';
 
 const store = setupStore({});
 

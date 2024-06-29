@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "mock": "set VITE_APP_API_MOCKING_ENABLED=enabled && npm run dev",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
@@ -77,7 +78,7 @@
     "tailwindcss": "^3.3.3",
     "ts-jest": "^29.1.1",
     "typescript": "^5.0.2",
-    "vite": "^4.4.5",
+    "vite": "^5.3.2",
     "vitest": "^1.6.0",
     "vitest-canvas-mock": "^0.3.3",
     "whatwg-fetch": "^3.6.19"

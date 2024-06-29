@@ -26,5 +26,6 @@
     }
   },
   "include": [".eslintrc.cjs", "vite.config.ts", ".prettierrc.cjs", "tailwind.config.js", "src"],
+  "exclude": ["node_modules", "dist", "coverage", "public"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
