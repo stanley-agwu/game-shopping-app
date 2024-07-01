@@ -61,10 +61,12 @@ const NavigationMenu = forwardRef<MutableRefObject<HTMLDivElement | null>, any>(
           dispatch={dispatch}
           onClose={onClose}
           toggleDrawer={toggleDrawer}
+          aria-label="cart drawer"
         >
           <button
             onClick={toggleDrawer as MouseEventHandler<HTMLButtonElement>}
             className="list-none flex items-center relative"
+            aria-label="toggle cart"
           >
             <img
               src={ShoppingCartIcon as string}
