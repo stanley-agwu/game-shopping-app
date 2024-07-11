@@ -11,7 +11,7 @@ import { useScrollTop } from '@/common/hooks/useScrollTop';
 
 function App() {
   const { state, dispatch } = usePersistState('gameCart', initialState);
-  const ref = useRef<HTMLDivElement>();
+  const ref = useRef<HTMLDivElement | null>();
   const isIndexView = useScrollTop(ref as MutableRefObject<HTMLDivElement>);
 
   const memoizedContext = useMemo(
@@ -22,7 +22,7 @@ function App() {
     [dispatch, state]
   );
 
-  const handleScroll = () => ref?.current?.scrollIntoView();
+  const handleScroll = () => window?.scrollTo({ top: 0, behavior: 'smooth' });
 
   return (
     <ShopContext.Provider value={memoizedContext}>
