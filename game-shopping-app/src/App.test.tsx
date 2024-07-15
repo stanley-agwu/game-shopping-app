@@ -4,6 +4,8 @@ import { render, screen, userEvent } from '@/tests/test-utils';
 
 import App from './App';
 import mockState from './mocks/results/mockState';
+import { emptyCartContextValue } from './mocks/results/cartContext';
+import ShopContext from './common/context/shopContext';
 
 describe('App', () => {
   beforeEach(() => {
@@ -16,6 +18,7 @@ describe('App', () => {
     });
     window.IntersectionObserver = mockIntersectionObserver;
   });
+
   it('renders App', async () => {
     render(<App />, { preloadedState: mockState as any });
 
@@ -26,7 +29,12 @@ describe('App', () => {
   });
 
   it('click add to cart button', async () => {
-    render(<App />, { preloadedState: mockState as any });
+    const dispatch = vi.fn();
+    render(
+      <ShopContext.Provider value={{ ...emptyCartContextValue, dispatch }}>
+        <App />
+      </ShopContext.Provider>
+    );
 
     const addToCartButton = await screen.findAllByRole('button', { name: 'Add to cart' });
     const removeFromCartButton = screen.queryByRole('button', { name: 'Remove from cart' });
@@ -57,20 +65,31 @@ describe('App', () => {
   });
 
   it('Add to shop cart and checkout', async () => {
-    render(<App />, { preloadedState: mockState as any });
+    const dispatch = vi.fn();
+    render(
+      <ShopContext.Provider value={{ ...emptyCartContextValue, dispatch }}>
+        <App />
+      </ShopContext.Provider>
+    );
 
     const toggleCartButton = await screen.findByRole('button', { name: 'toggle cart' });
-    const addToCartButton = await screen.findAllByRole('button', { name: 'Add to cart' });
-
-    await userEvent.click(addToCartButton[0]);
+    const addToCartButtons = await screen.findAllByRole('button', { name: 'Add to cart' });
 
     await userEvent.click(toggleCartButton);
+
+    expect(
+      await screen.findByText(
+        'There are currently no game items in the cart. Consider adding some.'
+      )
+    ).toBeInTheDocument();
+
+    await userEvent.click(addToCartButtons[0]);
+
     expect(
       screen.queryByText('There are currently no game items in the cart. Consider adding some.')
     ).not.toBeInTheDocument();
 
     const checkoutButton = await screen.findByRole('button', { name: 'Checkout' });
-
     await userEvent.click(checkoutButton);
 
     expect(
@@ -78,5 +97,30 @@ describe('App', () => {
         'There are currently no game items in the cart. Consider adding some.'
       )
     ).toBeInTheDocument();
+  });
+
+  it('Add to shop cart, increment and decrement', async () => {
+    const dispatch = vi.fn();
+    render(
+      <ShopContext.Provider value={{ ...emptyCartContextValue, dispatch }}>
+        <App />
+      </ShopContext.Provider>
+    );
+
+    const toggleCartButton = await screen.findByRole('button', { name: 'toggle cart' });
+    const addToCartButtons = await screen.findAllByRole('button', { name: 'Add to cart' });
+
+    await userEvent.click(addToCartButtons[0]);
+    await userEvent.click(toggleCartButton);
+
+    expect(await screen.findByLabelText('count')).toHaveTextContent('1');
+
+    await userEvent.click(await screen.findByText('+'));
+
+    expect(await screen.findByLabelText('count')).toHaveTextContent('2');
+
+    await userEvent.click(await screen.findByText('-'));
+
+    expect(await screen.findByLabelText('count')).toHaveTextContent('1');
   });
 });
