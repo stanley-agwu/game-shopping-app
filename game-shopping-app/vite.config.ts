@@ -36,6 +36,7 @@ export default defineConfig({
     css: true,
     coverage: {
       all: true,
+      provider: 'v8',
       exclude: [
         '**/public/**',
         '**/.eslintrc.cjs',
@@ -43,7 +44,6 @@ export default defineConfig({
         '**/postcss.config.js',
         '**/tailwind.config.js',
         '**/main.tsx',
-        '**/setupTests.ts',
         '**/browser.dev.ts',
         '**/browser.ts',
       ]
