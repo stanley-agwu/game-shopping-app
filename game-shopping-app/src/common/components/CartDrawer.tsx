@@ -11,6 +11,7 @@ import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
+import { v4 as uuidv4 } from 'uuid';
 
 interface CartDrawerProps extends HTMLAttributes<HTMLDivElement> {
   toggleDrawer: (event: KeyboardEvent | MouseEvent) => void;
@@ -52,7 +53,7 @@ export function GameCart({
       </Box>
       <List className="w-full">
         {cartItems?.map((cartItem) => (
-          <ListItem disablePadding key={cartItem.id} className="w-full p-2">
+          <ListItem disablePadding key={uuidv4()} className="w-full p-2">
             <GridContainer className="w-full flex items-center justify-between p-2 rounded border-2 border-slate-900">
               <ContentBox className="w-72 min-h-32 max-h-32 flex">
                 <img
@@ -64,11 +65,17 @@ export function GameCart({
                   className="w-32 h-32 object-cover border-2 border-slate-900"
                 />
                 <ContentBox className="flex flex-col w-40 h-32 py-1 px-4 justify-start">
-                  <Box className="w-full flex flex-wrap text-sm break-all font-medium">
+                  <Box
+                    className="w-full flex flex-wrap text-sm break-all font-medium"
+                    aria-label="title"
+                  >
                     {cartItem.title}
                   </Box>
                   <Box className="mb-auto">
-                    X <span className="font-bold">{cartItem.quantity}</span>
+                    X{' '}
+                    <span className="font-bold" aria-label="count">
+                      {cartItem.quantity}
+                    </span>
                   </Box>
                   <Box className="w-full font-semibold">{formatCurrency(cartItem.price)}</Box>
                 </ContentBox>
