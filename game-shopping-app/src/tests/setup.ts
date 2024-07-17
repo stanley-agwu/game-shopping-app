@@ -1,11 +1,7 @@
 import "@testing-library/jest-dom";
 import 'vitest-canvas-mock';
-import { fetch } from 'cross-fetch';
 
 import { server } from '@/mocks/server';
-
-// Add `fetch` polyfill.
-global.fetch = fetch;
 
 // Establish API mocking before all tests.
 beforeAll(() => server.listen());
