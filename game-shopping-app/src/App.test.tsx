@@ -3,14 +3,11 @@ import { describe, expect, it } from 'vitest';
 import { render, screen, userEvent } from '@/tests/test-utils';
 
 import App from './App';
-import mockState from './mocks/results/mockState';
-import { emptyCartContextValue } from './mocks/results/cartContext';
-import ShopContext from './common/context/shopContext';
 
 describe('App', () => {
   beforeEach(() => {
     // IntersectionObserver isn't available in test environment
-    const mockIntersectionObserver = jest.fn();
+    const mockIntersectionObserver = vi.fn();
     mockIntersectionObserver.mockReturnValue({
       observe: () => null,
       unobserve: () => null,
@@ -19,22 +16,19 @@ describe('App', () => {
     window.IntersectionObserver = mockIntersectionObserver;
   });
 
-  it('renders App', async () => {
-    render(<App />, { preloadedState: mockState as any });
+  it('renders App, fetching games successfully', async () => {
+    render(<App />);
 
     const title = screen.queryByText('Game shop');
+    const gameCard = await screen.findByText('Arcade Paradise');
 
     expect(title).toBeVisible();
-    expect(title).toBeDefined();
+    expect(title).toBeInTheDocument();
+    expect(gameCard).toBeInTheDocument();
   });
 
   it('click add to cart button', async () => {
-    const dispatch = vi.fn();
-    render(
-      <ShopContext.Provider value={{ ...emptyCartContextValue, dispatch }}>
-        <App />
-      </ShopContext.Provider>
-    );
+    render(<App />);
 
     const addToCartButton = await screen.findAllByRole('button', { name: 'Add to cart' });
     const removeFromCartButton = screen.queryByRole('button', { name: 'Remove from cart' });
@@ -52,7 +46,7 @@ describe('App', () => {
   });
 
   it('Empty shop cart', async () => {
-    render(<App />, { preloadedState: mockState as any });
+    render(<App />);
 
     const toggleCartButton = await screen.findByRole('button', { name: 'toggle cart' });
 
@@ -65,12 +59,7 @@ describe('App', () => {
   });
 
   it('Add to shop cart and checkout', async () => {
-    const dispatch = vi.fn();
-    render(
-      <ShopContext.Provider value={{ ...emptyCartContextValue, dispatch }}>
-        <App />
-      </ShopContext.Provider>
-    );
+    render(<App />);
 
     const toggleCartButton = await screen.findByRole('button', { name: 'toggle cart' });
     const addToCartButtons = await screen.findAllByRole('button', { name: 'Add to cart' });
@@ -84,6 +73,8 @@ describe('App', () => {
     ).toBeInTheDocument();
 
     await userEvent.click(addToCartButtons[0]);
+    await userEvent.click(addToCartButtons[1]);
+    await userEvent.click(toggleCartButton);
 
     expect(
       screen.queryByText('There are currently no game items in the cart. Consider adding some.')
@@ -100,12 +91,7 @@ describe('App', () => {
   });
 
   it('Add to shop cart, increment and decrement', async () => {
-    const dispatch = vi.fn();
-    render(
-      <ShopContext.Provider value={{ ...emptyCartContextValue, dispatch }}>
-        <App />
-      </ShopContext.Provider>
-    );
+    render(<App />);
 
     const toggleCartButton = await screen.findByRole('button', { name: 'toggle cart' });
     const addToCartButtons = await screen.findAllByRole('button', { name: 'Add to cart' });
