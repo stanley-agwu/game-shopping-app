@@ -8,21 +8,10 @@ import Shop from '@/modules/shop/Shop';
 import { useScrollTop } from '@/common/hooks/useScrollTop';
 
 const App = () => {
+  const { state, dispatch } = usePersistState('gameCart', initialState);
   const ref = useRef<HTMLDivElement | null>();
   const isIndexView = useScrollTop(ref as MutableRefObject<HTMLDivElement>);
 
-  const handleScroll = () => window?.scrollTo({ top: 0, behavior: 'smooth' });
-
-  return (
-    <>
-      <NavigationMenu ref={ref as MutableRefObject<any>} />
-      <Shop handleScroll={handleScroll} isIndexView={isIndexView} />
-    </>
-  );
-};
-
-const AppWrapper = () => {
-  const { state, dispatch } = usePersistState('gameCart', initialState);
   const memoizedContext = useMemo(
     () => ({
       ...state,
@@ -31,11 +20,14 @@ const AppWrapper = () => {
     [dispatch, state]
   );
 
+  const handleScroll = () => window?.scrollTo({ top: 0, behavior: 'smooth' });
+
   return (
     <ShopContext.Provider value={memoizedContext}>
-      <App />
+      <NavigationMenu ref={ref as MutableRefObject<any>} />
+      <Shop handleScroll={handleScroll} isIndexView={isIndexView} />
     </ShopContext.Provider>
   );
 };
 
-export default AppWrapper;
+export default App;
