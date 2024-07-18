@@ -18,12 +18,5 @@ export const gameApiService = createApi({
         params,
       }),
     }),
-
-    getGame: build.query<IGame, { id: string }>({
-      query: (params) => ({
-        url: coreConfig.endpoints.details,
-        params,
-      }),
-    }),
   }),
 });
