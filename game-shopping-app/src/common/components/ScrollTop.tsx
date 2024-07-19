@@ -11,7 +11,7 @@ const ScrollTop = ({ handleScroll, shouldDisplay = false }: ScrollTopProps) => (
       src={ArrowTop}
       alt="Scroll top"
       style={{ display: shouldDisplay ? 'block' : 'none' }}
-      className="w-14 p-3 m-3 bg-slate-300 rounded-full z-10 cursor-pointer fixed right-0 bottom-10"
+      className="w-14 h-14 p-3 m-3 bg-[#1E293B] animate-bounce rounded-full z-10 cursor-pointer fixed right-0 bottom-10"
     />
   </button>
 );
