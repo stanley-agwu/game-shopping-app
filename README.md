@@ -1,6 +1,12 @@
 # game-shopping-app
 
-This is an app bootstrapped with vite and it shows data fetching from an API, data caching, state persistance, data display and presentation. It is responsive and mobile friendly.
+This is an app bootstrapped with vite and it shows data fetching from an API, data caching, state persistence, data display and presentation. It is responsive and mobile-friendly.
+
+
+## Detailed article on the testing of this react + vite + typescript app
+
+Testing React App the easy way [Testing React Applications the easy way with Testing Library, MSW, and Vitest — (Using a sample Vite app)](https://medium.com/@stanleyagwu2016/testing-react-applications-the-easy-way-with-testing-library-msw-and-vitest-using-a-sample-932916433203)
+
 
 ## Getting started
 
@@ -23,9 +29,11 @@ Launches the test runner in the interactive watch mode.
 
 Launches the test coverage in an interactive mode.
 
+
 ## Usage
 
-The app on load shows a dashboard of games items. Each game on the dashboards can be added to a shop cart list and the number of items incremented or decremented, as well as being removed from the cart. And data are persisted accross sessions and saved to local storage.
+The app on load shows a dashboard of game items. Each game on the dashboards can be added to a shop cart list and the number of items incremented or decremented, as well as being removed from the cart. Data are persisted across sessions and saved to local storage.
+
 
 ## More information
 
